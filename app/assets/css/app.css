@@ -1,3 +1,7 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .text-center {
     text-align: center;
 }
@@ -8,9 +12,60 @@ h1 {
 }
 
 #Quizzes {
-    width: 50%;
-    min-height: 5%;
+    position: relative;
+    width: 60%;
+    min-height: 100px;
     border: 2px solid black;
     margin: 0 auto;
-    padding: 2%;
+    z-index: 3;
 }
+
+.hidden{
+    display: none;
+}
+
+#tabContainer{
+    top: -42px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+}
+
+.tabs{
+    width: 100px;
+    border: 2px solid black;
+    border-top-right-radius: 15px;
+    margin-left: 1%;
+    padding: 10px;
+    z-index: 1;
+    background: #708090;
+    transition: all .3s;
+}
+
+.tabs:hover {
+    transition: all .3s;
+    background: #abb2ba;
+    z-index: 2;
+}
+
+.activetab {
+    background: white;
+    z-index: 2;
+    border-bottom: none;
+}
+
+.activetab:hover {
+    background: white;
+    color: steelblue;
+}
+
+#quizContainer {
+    z-index: 2;
+    background: white;
+    width: 90%;
+    margin: 2% auto;
+}
+
+

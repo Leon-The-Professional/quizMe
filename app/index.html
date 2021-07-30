@@ -13,48 +13,57 @@
     <h1 class="text-center">QuizMe</h1>
 
     <section id="Quizzes">
-        <div id="html" class="hidden">
-            <label for="htmlQzs"></label>
-            <select name="" class="quizSelect" id="htmlQuizzes">
-                <option value="">Forms</option>
-                <option value="">Tables</option>
-            </select>
+        <div id="tabContainer">
+            <div class="tabs activetab" id="htmlTab">HTML</div>
+            <div class="tabs" id="cssTab">CSS</div>
+            <div class="tabs" id="jsTab">JavaScript</div>
+            <div class="tabs" id="gitTab">Git</div>
+            <div class="tabs" id="genTab">General</div>
         </div>
-        <div id="css" class="hidden">
-            <label for="cssQzs"></label>
-            <select name="" class="quizSelect" id="cssQzs">
-                <option value="">Flexbox</option>
-                <option value="">Grid</option>
-                <option value="">Media Queries</option>
-                <option value="">CSS Variables</option>
-                <option value="">CSS Methods</option>
-            </select>
-        </div>
-        <div id="js" class="hidden">
-            <label for="jsQzs"></label>
-            <select name="" class="quizSelect" id="jsQzs">
-                <option value="">String Methods</option>
-                <option value="">Math Object</option>
-                <option value="">Arrays</option>
-                <option value="">Loops</option>
-                <option value="">Higher Order Functions</option>
-                <option value="">Try Catch</option>
-                <option value="">Switch Case</option>
-                <option value="">Manipulating Object Literals</option>
-                <option value="">Events and Event Listeners</option>
-                <option value="">Promises</option>
-                <option value="">Async Functions</option>
-                <option value=""></option>
-            </select>
-        </div>
-        <div id="git" class="hidden">
-            <select name="" class="quizSelect">
-                <option value="">Git Quiz 1</option>
-                <option value="">Git Quiz 2</option>
-                <option value="">Git Quiz 3</option>
-                <option value="">GitHub Quiz 1</option>
-                <option value="">GitHub Quiz 2</option>
-            </select>
+        <div id="quizContainer">
+            <div id="htmlQ" class="quizPicker">
+                <label for="htmlQzs"></label>
+                <select name="" class="quizSelect" id="htmlQuizzes">
+                    <option value="">Forms</option>
+                    <option value="">Tables</option>
+                </select>
+            </div>
+            <div id="cssQ" class="quizPicker hidden">
+                <label for="cssQzs"></label>
+                <select name="" class="quizSelect" id="cssQzs">
+                    <option value="">Flexbox</option>
+                    <option value="">Grid</option>
+                    <option value="">Media Queries</option>
+                    <option value="">CSS Variables</option>
+                    <option value="">CSS Methods</option>
+                </select>
+            </div>
+            <div id="jsQ" class="hidden quizPicker">
+                <label for="jsQzs"></label>
+                <select name="" class="quizSelect" id="jsQzs">
+                    <option value="">String Methods</option>
+                    <option value="">Math Object</option>
+                    <option value="">Arrays</option>
+                    <option value="">Loops</option>
+                    <option value="">Higher Order Functions</option>
+                    <option value="">Try Catch</option>
+                    <option value="">Switch Case</option>
+                    <option value="">Manipulating Object Literals</option>
+                    <option value="">Events and Event Listeners</option>
+                    <option value="">Promises</option>
+                    <option value="">Async Functions</option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div id="gitQ" class="hidden quizPicker">
+                <select name="" class="quizSelect">
+                    <option value="">Git Quiz 1</option>
+                    <option value="">Git Quiz 2</option>
+                    <option value="">Git Quiz 3</option>
+                    <option value="">GitHub Quiz 1</option>
+                    <option value="">GitHub Quiz 2</option>
+                </select>
+            </div>
         </div>
     </section>
 
