@@ -1,4 +1,5 @@
 const tabs = document.querySelectorAll('.tabs')
+const quizPickers = document.querySelectorAll('.quizPicker')
 
 let specificTabs = [
     htmlTab = document.querySelector('#htmlTab'),
@@ -16,8 +17,7 @@ let qzs = [
     miscQ = document.querySelector('#miscQ')
 ]
 
-const quizPickers = document.querySelectorAll('.quizPicker')
-
+// 
 for (let tab of tabs) {
     tab.addEventListener('click', () => {
         for (let t of tabs) {
