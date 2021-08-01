@@ -17,19 +17,19 @@
             <div class="tabs activetab" id="htmlTab">HTML</div>
             <div class="tabs" id="cssTab">CSS</div>
             <div class="tabs" id="jsTab">JavaScript</div>
-            <div class="tabs" id="gitTab">Git</div>
-            <div class="tabs" id="genTab">General</div>
+            <div class="tabs" id="gitTab">Git & GitHub</div>
+            <div class="tabs" id="miscTab">Miscellaneous</div>
         </div>
         <div id="quizContainer">
             <div id="htmlQ" class="quizPicker">
-                <label for="htmlQzs"></label>
-                <select name="" class="quizSelect" id="htmlQuizzes">
+                <label for="htmlQzs">Select an HTML quiz</label>
+                <select name="" class="quizSelect" id="htmlQzs">
                     <option value="">Forms</option>
                     <option value="">Tables</option>
                 </select>
             </div>
             <div id="cssQ" class="quizPicker hidden">
-                <label for="cssQzs"></label>
+                <label for="cssQzs">Select a CSS quiz</label>
                 <select name="" class="quizSelect" id="cssQzs">
                     <option value="">Flexbox</option>
                     <option value="">Grid</option>
@@ -39,8 +39,9 @@
                 </select>
             </div>
             <div id="jsQ" class="hidden quizPicker">
-                <label for="jsQzs"></label>
+                <label for="jsQzs">Select a JavaScript quiz</label>
                 <select name="" class="quizSelect" id="jsQzs">
+                    <option value="">General JavaScript Terminology</option>
                     <option value="">String Methods</option>
                     <option value="">Math Object</option>
                     <option value="">Arrays</option>
@@ -52,16 +53,22 @@
                     <option value="">Events and Event Listeners</option>
                     <option value="">Promises</option>
                     <option value="">Async Functions</option>
-                    <option value=""></option>
                 </select>
             </div>
             <div id="gitQ" class="hidden quizPicker">
-                <select name="" class="quizSelect">
+                <label for="gitQzs">Select a Git or GitHub quiz</label>
+                <select name="" class="quizSelect" id="gitQzs">
                     <option value="">Git Quiz 1</option>
                     <option value="">Git Quiz 2</option>
                     <option value="">Git Quiz 3</option>
                     <option value="">GitHub Quiz 1</option>
                     <option value="">GitHub Quiz 2</option>
+                </select>
+            </div>
+            <div id="miscQ" class="hidden quizPicker">
+                <label for="miscQzs">Select a Miscellaneous quiz</label>
+                <select name="" class="quizSelect" id="miscQzs">
+                    <option value="">Abbreviations</option>
                 </select>
             </div>
         </div>
@@ -74,7 +81,7 @@
 
 
 
-
+    <script src="assets/js/quizzes.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 

@@ -7,6 +7,8 @@ const jsTab = document.querySelector('#jsTab')
 const jsQ = document.querySelector('#jsQ')
 const gitTab = document.querySelector('#gitTab')
 const gitQ = document.querySelector('#gitQ')
+const miscTab = document.querySelector('#miscTab')
+const miscQ = document.querySelector('#miscQ')
 const quizPickers = document.querySelectorAll('.quizPicker')
 
 for (let tab of tabs) {
@@ -47,5 +49,9 @@ jsTab.addEventListener('click', function () {
 gitTab.addEventListener('click', function () {
     hideQzs();
     showQz(gitQ);
+})
+miscTab.addEventListener('click', function () {
+    hideQzs();
+    showQz(miscQ);
 })
 
