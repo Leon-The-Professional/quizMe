@@ -1,14 +1,21 @@
 const tabs = document.querySelectorAll('.tabs')
-const htmlTab = document.querySelector('#htmlTab')
-const htmlQ = document.querySelector('#htmlQ')
-const cssTab = document.querySelector('#cssTab')
-const cssQ = document.querySelector('#cssQ')
-const jsTab = document.querySelector('#jsTab')
-const jsQ = document.querySelector('#jsQ')
-const gitTab = document.querySelector('#gitTab')
-const gitQ = document.querySelector('#gitQ')
-const miscTab = document.querySelector('#miscTab')
-const miscQ = document.querySelector('#miscQ')
+
+let specificTabs = [
+    htmlTab = document.querySelector('#htmlTab'),
+    cssTab = document.querySelector('#cssTab'),
+    jsTab = document.querySelector('#jsTab'),
+    gitTab = document.querySelector('#gitTab'),
+    miscTab = document.querySelector('#miscTab')
+]
+
+let qzs = [
+    htmlQ = document.querySelector('#htmlQ'),
+    cssQ = document.querySelector('#cssQ'),
+    jsQ = document.querySelector('#jsQ'),
+    gitQ = document.querySelector('#gitQ'),
+    miscQ = document.querySelector('#miscQ')
+]
+
 const quizPickers = document.querySelectorAll('.quizPicker')
 
 for (let tab of tabs) {
@@ -34,24 +41,10 @@ const showQz = function (selector) {
     }
 }
 
-htmlTab.addEventListener('click', function () {
-    hideQzs();
-    showQz(htmlQ)
-})
-cssTab.addEventListener('click', function () {
-    hideQzs();
-    showQz(cssQ);
-})
-jsTab.addEventListener('click', function () {
-    hideQzs();
-    showQz(jsQ)
-})
-gitTab.addEventListener('click', function () {
-    hideQzs();
-    showQz(gitQ);
-})
-miscTab.addEventListener('click', function () {
-    hideQzs();
-    showQz(miscQ);
-})
+for (let i = 0; i < specificTabs.length; i++) {
+    specificTabs[i].addEventListener('click', function () {
+        hideQzs();
+        showQz(qzs[i])
+    })
+}
 
