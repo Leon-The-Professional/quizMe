@@ -17,7 +17,7 @@ let qzs = [
     miscQ = document.querySelector('#miscQ')
 ]
 
-// 
+// Quiz Selection
 for (let tab of tabs) {
     tab.addEventListener('click', () => {
         for (let t of tabs) {
@@ -47,4 +47,6 @@ for (let i = 0; i < specificTabs.length; i++) {
         showQz(qzs[i])
     })
 }
+
+
 

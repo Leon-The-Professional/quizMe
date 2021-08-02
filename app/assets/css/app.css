@@ -70,8 +70,8 @@ h1 {
 
 #quizContainer button {
     margin: 2% 0;
-    width: 5rem;
-    height: 2rem;
+    min-width: 5rem;
+    min-height: 2rem;
     background: #708090;
     color: whitesmoke;
 }
@@ -85,4 +85,19 @@ h1 {
     height: 1.5rem;
 }
 
+/* quiz sheet */
 
+.qcontain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.question {
+    width: 45%;
+}
+
+.answer {
+    width: 45%;
+}
