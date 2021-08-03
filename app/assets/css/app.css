@@ -13,7 +13,7 @@ h1 {
 
 #Quizzes {
     position: relative;
-    width: 60%;
+    width: 80%;
     min-height: 100px;
     border: 2px solid black;
     margin: 10% auto;
@@ -100,4 +100,14 @@ h1 {
 
 .answer {
     width: 45%;
+}
+
+@media screen and (max-width: 825px) {
+
+.tabs{
+    width: 50px;
+}
+
+
+
 }
