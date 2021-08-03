@@ -8,35 +8,40 @@ let LoopsQuiz = [
     'What methods can be used to turn keys and values from object literals into new iterable arrays? What method gives you a nested array of key value pairs?'
 ]
 
-// Populating Quiz
-const quizContainer = document.querySelector('#quizContainer')
-const quiz = document.querySelector('#quiz')
-let currentQuiz = document.querySelector('.quizSelect')
-const getQuiz = document.querySelector('#getQuiz')
-const populateQuiz = function (array) {
-    quiz.innerHTML = ''
-    i = 1;
-    for (let q of array) {
-        let qContain = document.createElement('div')
-        qContain.classList.add('qcontain')
-        let question = document.createElement('p')
-        let number = document.createElement('span')
-        number.innerText = `${i}. `
-        question.innerText = number.innerText + q;
-        qContain.append(question);
-        question.classList.add('question')
-        let answer = document.createElement('textarea')
-        answer.setAttribute('rows', '5')
-        qContain.append(answer)
-        answer.classList.add('answer')
-        quiz.append(qContain)
-        i++;
-    }
-    let checkQuiz = document.createElement('button')
-    checkQuiz.innerText = 'Check Answers'
-    quiz.append(checkQuiz)
-}
-
-getQuiz.addEventListener('click', function () {
-    populateQuiz(LoopsQuiz)
-})
+let forms = ['What input type lets a user answer with text?',
+    'What input type lets a user select zero or more options?',
+    'What input type lets a user select only one from a set of options?',
+    'What input type submits all the form data?',
+    'What input type creates a button?',
+    'What input type replaces a button with a dev chosen picture?',
+    'What input type allows a user to add a file from their own computer?',
+    'What input type hides text (but does not encrypt it)?',
+    'What input type will reset all form entries to default values?',
+    'What input type gives the user access to a slider?',
+    'What input type is not visible to a user, allowing the dev to include other information on a form submit?',
+    'What does the attribute checked do, provide an example of the syntax',
+    'What does the attribute disabled do, provide an example of the syntax',
+    'What does the attribute readonly do, provide an example of the syntax',
+    'What does the attribute max do, provide an example of the syntax',
+    'What does the attribute maxlength do, provide an example of the syntax',
+    'What does the attribute min do, provide an example of the syntax',
+    'What does the attribute autocomplete do, provide an example of the syntax',
+    'What does the attribute required do, provide an example of the syntax',
+    'What does the attribute size do, provide an example of the syntax',
+    'What does the attribute step do, provide an example of the syntax',
+    'What does the attribute value do, provide an example of the syntax',
+    'What does the attribute placeholder do, provide an example of the syntax',
+    'What does the attribute multiple do, provide an example of the syntax',
+    'What does the attribute pattern do, provide an example of the syntax',
+    'What does the attribute autofocus do, provide an example of the syntax',
+    'What element is used to let a user select from predetermined options in a dropdown list? What tag would be used to create predetermined option?',
+    'What element gives a larger area for users to write text into, and how do you specify its size?',
+    'What element also gives a dropdown list of predetermined options but does so as suggestions and still allows the user to type in their own answer?',
+    'What does the form attribute ‘action’ refer to, what property might it hold?',
+    'What does the form attribute ‘method’ refer to, what property might it hold?',
+    'What does the form attribute ‘target’ refer to, what property might it hold?',
+    'What does the form attribute ‘name’ refer to?',
+    'What are labels used for and how do you connect them to an input?',
+    'What are the fieldset and legend elements?',
+    'What javascript function will prevent a form from submitting to a server?'
+]
