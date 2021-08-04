@@ -1,7 +1,8 @@
 //Quizzes 
 
 // HTML
-let forms = ['What input type lets a user answer with text?',
+let forms = [
+    'What input type lets a user answer with text?',
     'What input type lets a user select zero or more options?',
     'What input type lets a user select only one from a set of options?',
     'What input type submits all the form data?',
@@ -93,15 +94,18 @@ let ArraysQuiz = [
     'What APM executes a function (that you provide) on each element of the array, resulting in a single output value? This APM uses an accumulator, what is the default value of the initial value if none is provided. Provide an example of the syntax. Is this APM destructive?',
 ]
 
-let LoopsQuiz = [
-    'What is a for loop, and what syntax does it use?',
-    'What is a while loop, and what syntax does it use?',
-    'What is a labeled statement?',
-    'What keyword ends a loop? What does it look like when used with a label?',
-    'What is a for of loop? What is the syntax?',
-    'Are object literals considered iterable?',
-    'What methods can be used to turn keys and values from object literals into new iterable arrays? What method gives you a nested array of key value pairs?'
-]
+let LoopsQuiz = {
+    key: '',
+    questions: [
+        'What is a for loop, and what syntax does it use?',
+        'What is a while loop, and what syntax does it use?',
+        'What is a labeled statement?',
+        'What keyword ends a loop? What does it look like when used with a label?',
+        'What is a for of loop? What is the syntax?',
+        'Are object literals considered iterable?',
+        'What methods can be used to turn keys and values from object literals into new iterable arrays? What method gives you a nested array of key value pairs?'
+    ],
+}
 
 let StringsQuiz = [
     'What syntax is used to access a character in a string by its index?',
@@ -148,7 +152,6 @@ let OperatorsQuiz = [
     'What is a conditional operator and how is it written?',
 ]
 // GIT AND GITHUB
-
 let GitQuiz1 = [
     'What is the command to initialize a repository?',
     'What is the command for setting your username?',

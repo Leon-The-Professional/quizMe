@@ -63,11 +63,11 @@ function shuffleArray(array) {
         array[j] = temp;
     }
 }
-const populateQuiz = function (arr) {
+const populateQuiz = function (obj) {
     quiz.innerHTML = ''
     i = 1;
-    shuffleArray(arr);
-    for (let q of arr) {
+    shuffleArray(obj.questions);
+    for (let q of obj.questions) {
         let qContain = document.createElement('div')
         qContain.classList.add('qcontain')
         let question = document.createElement('p')
