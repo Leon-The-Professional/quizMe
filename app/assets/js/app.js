@@ -30,8 +30,9 @@ for (let tab of tabs) {
 }
 
 const hideQzs = function () {
-    for (let quiz of quizPickers) {
-        quiz.classList.add('hidden')
+    for (let q of quizPickers) {
+        q.classList.add('hidden')
+        quiz.innerHTML = ''
     }
 }
 
@@ -48,10 +49,54 @@ for (let i = 0; i < specificTabs.length; i++) {
     })
 }
 
+// Establishing Quiz Selected
+let currentQuiz = document.querySelector('.quizSelect')
+let choice = formsQuiz;
+function changeChoice() {
+    switch (currentQuiz.value) {
+        // html quizzes
+        case 'forms':
+            choice = formsQuiz;
+            break;
+        case 'tables':
+            choice = tablesQuiz;
+            break;
+        // css quizzes 
+        case 'flexbox':
+            choice = flexboxQuiz;
+            break;
+        case 'grid':
+            choice = Quiz;
+            break;
+        case 'mediaQueries':
+            choice = mediaQueryQuiz;
+            break;
+        case 'cssVariables':
+            choice = Quiz;
+            break;
+        case 'cssMethods':
+            choice = Quiz;
+            break;
+        //  JavaScript quizzes
+        case '':
+            choice = Quiz;
+            break;
+        case '':
+            choice = Quiz;
+            break;
+        case '':
+            choice = Quiz;
+            break;
+        case '':
+            choice = Quiz;
+            break;
+        default:
+    }
+}
+currentQuiz.addEventListener('change', changeChoice)
 // Populating Quiz
 const quizContainer = document.querySelector('#quizContainer')
 const quiz = document.querySelector('#quiz')
-let currentQuiz = document.querySelector('.quizSelect')
 const getQuiz = document.querySelector('#getQuiz')
 // let randNum = function () { Math.random() * 10 }
 // Durstenfeld Shuffle 
@@ -89,6 +134,6 @@ const populateQuiz = function (obj) {
 }
 
 getQuiz.addEventListener('click', function () {
-    populateQuiz(LoopsQuiz)
+    populateQuiz(choice)
 })
 
