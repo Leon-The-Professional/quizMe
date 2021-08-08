@@ -1,48 +1,103 @@
 //Quizzes 
 
 // HTML
-let formsQuiz = {
+let formsInpQz = {
     key: '',
     questions: [
-        'What input type lets a user answer with text?',
-        'What input type lets a user select zero or more options?',
-        'What input type lets a user select only one from a set of options?',
-        'What input type submits all the form data?',
-        'What input type creates a button?',
-        'What input type replaces a button with a dev chosen picture?',
-        'What input type allows a user to add a file from their own computer?',
-        'What input type hides text (but does not encrypt it)?',
-        'What input type will reset all form entries to default values?',
-        'What input type gives the user access to a slider?',
-        'What input type is not visible to a user, allowing the dev to include other information on a form submit?',
-        'What does the attribute checked do, provide an example of the syntax',
-        'What does the attribute disabled do, provide an example of the syntax',
-        'What does the attribute readonly do, provide an example of the syntax',
-        'What does the attribute max do, provide an example of the syntax',
-        'What does the attribute maxlength do, provide an example of the syntax',
-        'What does the attribute min do, provide an example of the syntax',
-        'What does the attribute autocomplete do, provide an example of the syntax',
-        'What does the attribute required do, provide an example of the syntax',
-        'What does the attribute size do, provide an example of the syntax',
-        'What does the attribute step do, provide an example of the syntax',
-        'What does the attribute value do, provide an example of the syntax',
-        'What does the attribute placeholder do, provide an example of the syntax',
-        'What does the attribute multiple do, provide an example of the syntax',
-        'What does the attribute pattern do, provide an example of the syntax',
-        'What does the attribute autofocus do, provide an example of the syntax',
-        'What element is used to let a user select from predetermined options in a dropdown list? What tag would be used to create predetermined option?',
-        'What element gives a larger area for users to write text into, and how do you specify its size?',
-        'What element also gives a dropdown list of predetermined options but does so as suggestions and still allows the user to type in their own answer?',
-        'What does the form attribute ‘action’ refer to, what property might it hold?',
-        'What does the form attribute ‘method’ refer to, what property might it hold?',
-        'What does the form attribute ‘target’ refer to, what property might it hold?',
-        'What does the form attribute ‘name’ refer to?',
-        'What are labels used for and how do you connect them to an input?',
-        'What are the fieldset and legend elements?',
-        'What javascript function will prevent a form from submitting to a server?'
+        '1. What input type lets a user answer with text?',
+        '2. What input type lets a user select zero or more options?',
+        '3. What input type lets a user select only one from a set of options?',
+        '4. What input type submits all the form data?',
+        '5. What input type creates a button?',
+        '6. What input type replaces a button with a dev chosen picture?',
+        '7. What input type allows a user to add a file from their own computer?',
+        '8. What input type hides text (but does not encrypt it)?',
+        '9. What input type will reset all form entries to default values?',
+        '10. What input type gives the user access to a slider?',
+        '11. What input type is not visible to a user, allowing the dev to include other information on a form submit?',
+    ],
+    answer: [
+        '1. <input type =”text”>',
+        '2. <input type =“checkbox”>',
+        '3. <input type =”radio”>',
+        '4. <input type =”submit”>',
+        '5. <input type =”button”>',
+        '6. <input type =”image”>',
+        '7. <input type =”browse”>',
+        '8. <input type =”password”>',
+        '9. <input type =”reset”>',
+        '10. <input type =”range”>',
+        '11. <input type =”hidden”>'
     ]
 }
+let formsInpAttQz = {
+    key: '',
+    questions: [
+        '1. What does the attribute checked do, provide an example of the syntax',
+        '2. What does the attribute disabled do, provide an example of the syntax',
+        '3. What does the attribute readonly do, provide an example of the syntax',
+        '4. What does the attribute max do, provide an example of the syntax',
+        '5. What does the attribute maxlength do, provide an example of the syntax',
+        '6. What does the attribute min do, provide an example of the syntax',
+        '7. What does the attribute autocomplete do, provide an example of the syntax',
+        '8. What does the attribute required do, provide an example of the syntax',
+        '9. What does the attribute size do, provide an example of the syntax',
+        '10. What does the attribute step do, provide an example of the syntax',
+        '11. What does the attribute value do, provide an example of the syntax',
+        '12. What does the attribute placeholder do, provide an example of the syntax',
+        '13. What does the attribute multiple do, provide an example of the syntax',
+        '14. What does the attribute pattern do, provide an example of the syntax',
+        '15. What does the attribute autofocus do, provide an example of the syntax',
+    ],
+    answer: [
+        '1.	Starts a checkbox as checked on load. <input type=”checkbox” checked>',
+        '2.	Make it so the input cannot be selected, modified, or used in a submit action <input type=”text” disabled>',
+        '3.	Make it so an input can hold a value, but not be modified by a user <input type=”text” readonly>',
+        '4.	Set the max selectable amount of a given range. <input type=”range” max=”50”>',
+        '5.	Set the max amount of characters a text input can hold. <input type=”text” maxlength=”10”>',
+        '6.	Set the min selectable amount of a given range. <input type=”range” min=”0”>',
+        '7.	Provides autocomplete functionality based on what is provided by the browser. <input type=”text” autocomplete>',
+        '8.	Requires that a field must not be blank in order to proceed with the submission of a form. <input type=”password” required>',
+        '9.	Specifies the size of a given input. <input type=”text” size=”50px”>',
+        '10. Specifies the amount of numbers jumped at a time, usable with range or number inputs. <input type=”range” step=”10”>',
+        '11. Specifies what value an option will carry when submitted.<input type=”radio” value=”boy”>',
+        '12. Sets what is written in an input before the user selects it. <input type=”text” placeholder=”username”>',
+        '13. Specifies whether an input can output multiple values. <input type=”text” multiple>',
+        '14. Specifies a pattern that must be followed for an input to submit. <input type=”text” pattern=”1-3 a:A>',
+        '15. Sets which input will be focused on at load. <input type=’text’ autofocus>'
 
+    ]
+}
+let formsGenQz = {
+    key: '',
+    questions: [
+        '1 What element is used to let a user select from predetermined options in a dropdown list? What tag would be used to create predetermined option?',
+        '2. What element gives a larger area for users to write text into, and how do you specify its size?',
+        '3. What element also gives a dropdown list of predetermined options but does so as suggestions and still allows the user to type in their own answer?',
+        '4. What does the form attribute ‘action’ refer to, what property might it hold?',
+        '5. What does the form attribute ‘method’ refer to, what property might it hold?',
+        '6. What does the form attribute ‘target’ refer to, what property might it hold?',
+        '7. What does the form attribute ‘name’ refer to?',
+        '8. What are labels used for and how do you connect them to an input?',
+        '9. What are the fieldset and legend elements?',
+        '10. What javascript function will prevent a form from submitting to a server?',
+        '11. What element is used to specify a field of some type that a user can enter data?'
+    ],
+    answer: [
+        '1.	<select> and <option>',
+        '2.	<textarea col=30 row=50>',
+        '3.	<predetermined>',
+        '4.	action refers to the page the form will interact with. such as /page/server.php',
+        '5.	Method refers to the method the data from a from will be submitted using. Such as POST, GET, PATCH. Part of restful routing.',
+        '6.	Target refers to where the user will be directed or what the user will be presented with after submitting the form.  _blank would open a new page.',
+        '7.	Name is the name of the form being submitted.',
+        '8.	Labels are used to clearly indicated what inputs are used for. The for=”” of a label should match the id=”” of an input.',
+        '9.	A fieldset is a box surrounding a form, signifying what parts are tied together. The legend is essentially the title displayed on the fieldset.',
+        '10. preventdefault',
+        '11. The input tag. Make sure to always enter the type attribute to specify what input is being used.'
+
+    ]
+}
 let tablesQuiz = {
     questions: [
         'What are the proper semantic element names for a table?',

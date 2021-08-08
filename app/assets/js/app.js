@@ -51,12 +51,18 @@ for (let i = 0; i < specificTabs.length; i++) {
 
 // Establishing Quiz Selected
 let currentQuiz = document.querySelector('.quizSelect')
-let choice = formsQuiz;
+let choice = formsInpQz;
 function changeChoice() {
     switch (currentQuiz.value) {
         // html quizzes
-        case 'forms':
-            choice = formsQuiz;
+        case 'inpTyp':
+            choice = formsInpQz;
+            break;
+        case 'inpAtt':
+            choice = formsInpAttQz;
+            break;
+        case 'formGen':
+            choice = formsGenQz;
             break;
         case 'tables':
             choice = tablesQuiz;
@@ -116,9 +122,7 @@ const populateQuiz = function (obj) {
         let qContain = document.createElement('div')
         qContain.classList.add('qcontain')
         let question = document.createElement('p')
-        let number = document.createElement('span')
-        number.innerText = `${i}. `
-        question.innerText = number.innerText + q;
+        question.innerText = q;
         qContain.append(question);
         question.classList.add('question')
         let answer = document.createElement('textarea')
