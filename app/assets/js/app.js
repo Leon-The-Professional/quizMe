@@ -6,6 +6,7 @@ let specificTabs = [
     cssTab = document.querySelector('#cssTab'),
     jsTab = document.querySelector('#jsTab'),
     gitTab = document.querySelector('#gitTab'),
+    backendTab = document.querySelector('#backendTab'),
     miscTab = document.querySelector('#miscTab')
 ]
 
@@ -14,6 +15,7 @@ let qzs = [
     cssQ = document.querySelector('#cssQ'),
     jsQ = document.querySelector('#jsQ'),
     gitQ = document.querySelector('#gitQ'),
+    backendQ = document.querySelector('#backendQ'),
     miscQ = document.querySelector('#miscQ')
 ]
 
@@ -51,7 +53,7 @@ for (let i = 0; i < specificTabs.length; i++) {
 
 // Establishing Quiz Selected
 let currentQuiz = document.querySelector('.quizSelect')
-let choice = formsInpQz;
+let choice = undefined;
 function changeChoice() {
     switch (currentQuiz.value) {
         // html quizzes
@@ -96,6 +98,19 @@ function changeChoice() {
         case '':
             choice = Quiz;
             break;
+        //  Backend quizzes
+        case 'node':
+            choice = nodeQz;
+            break;
+        case '':
+            choice = Quiz;
+            break;
+        case '':
+            choice = Quiz;
+            break;
+        case '':
+            choice = Quiz;
+            break;
         default:
     }
 }
@@ -122,7 +137,7 @@ const populateQuiz = function (obj) {
         let qContain = document.createElement('div')
         qContain.classList.add('qcontain')
         let question = document.createElement('p')
-        question.innerText = q;
+        question.innerHTML = q;
         qContain.append(question);
         question.classList.add('question')
         let answer = document.createElement('textarea')

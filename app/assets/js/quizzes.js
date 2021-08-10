@@ -23,7 +23,7 @@ let formsInpQz = {
         '4. <input type =”submit”>',
         '5. <input type =”button”>',
         '6. <input type =”image”>',
-        '7. <input type =”browse”>',
+        '7. <input type =”file”>',
         '8. <input type =”password”>',
         '9. <input type =”reset”>',
         '10. <input type =”range”>',
@@ -33,26 +33,26 @@ let formsInpQz = {
 let formsInpAttQz = {
     key: '',
     questions: [
-        '1. What does the attribute checked do, provide an example of the syntax',
-        '2. What does the attribute disabled do, provide an example of the syntax',
-        '3. What does the attribute readonly do, provide an example of the syntax',
-        '4. What does the attribute max do, provide an example of the syntax',
-        '5. What does the attribute maxlength do, provide an example of the syntax',
-        '6. What does the attribute min do, provide an example of the syntax',
-        '7. What does the attribute autocomplete do, provide an example of the syntax',
-        '8. What does the attribute required do, provide an example of the syntax',
-        '9. What does the attribute size do, provide an example of the syntax',
-        '10. What does the attribute step do, provide an example of the syntax',
-        '11. What does the attribute value do, provide an example of the syntax',
-        '12. What does the attribute placeholder do, provide an example of the syntax',
-        '13. What does the attribute multiple do, provide an example of the syntax',
-        '14. What does the attribute pattern do, provide an example of the syntax',
-        '15. What does the attribute autofocus do, provide an example of the syntax',
+        '1. What does the attribute <em>checked</em> do, provide an example of the syntax',
+        '2. What does the attribute <em>disabled</em> do, provide an example of the syntax',
+        '3. What does the attribute <em>readonly</em> do, provide an example of the syntax',
+        '4. What does the attribute <em>max</em> do, provide an example of the syntax',
+        '5. What does the attribute <em>maxlength</em> do, provide an example of the syntax',
+        '6. What does the attribute <em>min</em> do, provide an example of the syntax',
+        '7. What does the attribute <em>autocomplete</em> do, provide an example of the syntax',
+        '8. What does the attribute <em>required</em> do, provide an example of the syntax',
+        '9. What does the attribute <em>size</em> do, provide an example of the syntax',
+        '10. What does the attribute <em>step</em> do, provide an example of the syntax',
+        '11. What does the attribute <em>value</em> do, provide an example of the syntax',
+        '12. What does the attribute <em>placeholder</em> do, provide an example of the syntax',
+        '13. What does the attribute <em>multiple</em> do, provide an example of the syntax',
+        '14. What does the attribute <em>pattern</em> do, provide an example of the syntax',
+        '15. What does the attribute <em>autofocus</em> do, provide an example of the syntax',
     ],
     answer: [
         '1.	Starts a checkbox as checked on load. <input type=”checkbox” checked>',
-        '2.	Make it so the input cannot be selected, modified, or used in a submit action <input type=”text” disabled>',
-        '3.	Make it so an input can hold a value, but not be modified by a user <input type=”text” readonly>',
+        'Specify that the input cannot be selected or modified and the value will not be sent with a submit action <input type=”text” disabled>',
+        '3. Specifies that an input cannot be modified (however, a user can tab to it, highlight it, and copy the text from it)..<input type=”text” readonly>',
         '4.	Set the max selectable amount of a given range. <input type=”range” max=”50”>',
         '5.	Set the max amount of characters a text input can hold. <input type=”text” maxlength=”10”>',
         '6.	Set the min selectable amount of a given range. <input type=”range” min=”0”>',
@@ -60,7 +60,7 @@ let formsInpAttQz = {
         '8.	Requires that a field must not be blank in order to proceed with the submission of a form. <input type=”password” required>',
         '9.	Specifies the size of a given input. <input type=”text” size=”50px”>',
         '10. Specifies the amount of numbers jumped at a time, usable with range or number inputs. <input type=”range” step=”10”>',
-        '11. Specifies what value an option will carry when submitted.<input type=”radio” value=”boy”>',
+        '11. Specifies an initial value or for option inputs like option, radio and checkbox; specifies what value an option will carry when submitted.<input type=”radio” value=”boy”>',
         '12. Sets what is written in an input before the user selects it. <input type=”text” placeholder=”username”>',
         '13. Specifies whether an input can output multiple values. <input type=”text” multiple>',
         '14. Specifies a pattern that must be followed for an input to submit. <input type=”text” pattern=”1-3 a:A>',
@@ -354,5 +354,32 @@ let GitHubQuiz2 = {
     ]
 }
 
+// Backend
 
+let nodeQz = {
+    key: '',
+    questions: [
+        '1. What is Node?',
+        '2. What is a REPL?',
+        '3. What are seven basic commands used in node, and what do they do?',
+        '4. What key combination will exit Node?',
+        '5. When using a browser global scope is referred to as window, what is global scope referred to in Node?',
+        '6. What command is used to run a JavaScript file using Node? Does it matter what directory the user is located in when running a file this way? ',
+        '7. In Node, what is the process object?',
+        '8. What is process.argv? How can arguments be passed through to the argv array (provide an example?',
+        '9. What is the node ‘fs’ module? What is the syntax necessary to use it?',
+    ],
+    answers: [
+        '1.	A JavaScript runtime that executes code outside of the browser. It enables the user to write server-side code using javaScript.',
+        '2.	Read Evaluate Print Loop. A REPL continues to listen for something to evaluate and return where a browser essentially listens and executes only once.',
+        '3.	.help Prints a list of these basic commands as a reminder. .break Helps you get out if you’re stuck. .clear is an alias for .break. .editor Enter the editor mode. .exit Exit the repl. .load Load JS from a file into the REPL session. .save Save all evaluated commands in this REPL session to a file.',
+        '4.	Ctrl + C twice will exit node.',
+        '5.	global',
+        '6.	node filename.ext . Yes, the user must be in the directory of the file being run, or specify the path based on where the user is located.',
+        '7.	process is a global object that provides information about and control over the current node.js process. It is always available to Node.js applications without using require(), but, it can also be explicitly accessed using require().',
+        '8.	process.argv Lists the executable path (aka the process.execPath, where node is located) and then the path to the file being executed (the file that is being executed). Argv is an array so remembering the order is important. To add arguments to the argv array from the cmd, the arguments must be entered after the name of the file being executed. example: node file.js puppies chickens monke',
+        '9.	The node ‘fs’ module is a series of methods for creating and manipulating files and folders. const fs = require(‘fs’);'
+
+    ]
+}
 
