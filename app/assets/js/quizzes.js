@@ -368,6 +368,18 @@ let nodeQz = {
         '7. In Node, what is the process object?',
         '8. What is process.argv? How can arguments be passed through to the argv array (provide an example?',
         '9. What is the node ‘fs’ module? What is the syntax necessary to use it?',
+        '10. What is the syntax for using a file rather than a built-in module?',
+        '11. What are three ways to export specific objects or functions from a file, to be used in another file? Provide an example using const add = (x, y) => x + y; as the variable being exported.',
+        '12. What is the syntax for destructurinng one or more objects from a different file, assuming it has been exported in its original file?',
+        '13. What is the process for exporting an entire directory?',
+        '14. What does NPM stand for and what is it?',
+        '15. What is the command for NPM to install packages?',
+        '16. What is the syntax for requiring an NPM package on a page',
+        '17. What is the command for creating a new package.json, and what information does a package.json contain?',
+        '18. When packages are installed what folder will they be found in (and created if none exist already)?',
+        '19. If you are in a directory that has a package.json with dependencies listed, what command will download all dependencies?',
+        '20. What flag can be added when installing packages, to install them globally? What is the command to use a global package?'
+
     ],
     answers: [
         '1.	A JavaScript runtime that executes code outside of the browser. It enables the user to write server-side code using javaScript.',
@@ -378,7 +390,19 @@ let nodeQz = {
         '6.	node filename.ext . Yes, the user must be in the directory of the file being run, or specify the path based on where the user is located.',
         '7.	process is a global object that provides information about and control over the current node.js process. It is always available to Node.js applications without using require(), but, it can also be explicitly accessed using require().',
         '8.	process.argv Lists the executable path (aka the process.execPath, where node is located) and then the path to the file being executed (the file that is being executed). Argv is an array so remembering the order is important. To add arguments to the argv array from the cmd, the arguments must be entered after the name of the file being executed. example: node file.js puppies chickens monke',
-        '9.	The node ‘fs’ module is a series of methods for creating and manipulating files and folders. const fs = require(‘fs’);'
+        '9.	The node ‘fs’ module is a series of methods for creating and manipulating files and folders. const fs = require(‘fs’);',
+        '10. const file = require(‘./filename’)',
+        '11. Declaring the const first then referencing it afterward with module.exports.add = add. Declaring the const in the same line exporting it, module.exports.add = (x, y) => x + y; After declaring the variable, exporting an object that references it (good way to export multiple variables at once module.exports.math = { add: add} ',
+        '12. const {objName, diffObjName} = require(‘./fileName’)',
+        '13. When exporting an entire directory, there must be a file named index.js (node will look for that file name) to represent the directory and all desired exports must be referenced there. When requiring the directory use const varName = require(‘./dirName’)',
+        '14. Node Package Manager. It is two things, first a library of thousands of packages published by other developers that can be used for free. Second, a command line tool to easily install and manage those packages in our Node projects.',
+        '15. npm install packageName OR npm I packageName',
+        '16. Assuming the package is installed, const varName = require(‘packageName’) the ./ are not required, nor is specifying the node modules folder.',
+        '17. npm init A package.json file contains things like description, licence, author and dependencies.',
+        '18. node_modules',
+        '19. npm install',
+        '20. -g , npm link packageName'
+
 
     ]
 }
