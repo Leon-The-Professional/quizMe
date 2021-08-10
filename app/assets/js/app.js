@@ -18,42 +18,9 @@ let qzs = [
     backendQ = document.querySelector('#backendQ'),
     miscQ = document.querySelector('#miscQ')
 ]
-
-// Quiz Selection
-for (let tab of tabs) {
-    tab.addEventListener('click', () => {
-        for (let t of tabs) {
-            if (t.classList.contains('activetab')) {
-                t.classList.remove('activetab')
-            }
-        }
-        tab.classList.toggle('activetab')
-    })
-}
-
-const hideQzs = function () {
-    for (let q of quizPickers) {
-        q.classList.add('hidden')
-        quiz.innerHTML = ''
-    }
-}
-
-const showQz = function (selector) {
-    if (selector.classList.contains('hidden')) {
-        selector.classList.remove('hidden')
-    }
-}
-
-for (let i = 0; i < specificTabs.length; i++) {
-    specificTabs[i].addEventListener('click', function () {
-        hideQzs();
-        showQz(qzs[i])
-    })
-}
-
 // Establishing Quiz Selected
-let currentQuiz = document.querySelector('.quizSelect')
-let choice = undefined;
+let currentQuiz = document.querySelector('.activeQuiz .quizSelect')
+let choice = formsGenQz;
 function changeChoice() {
     switch (currentQuiz.value) {
         // html quizzes
@@ -115,6 +82,44 @@ function changeChoice() {
     }
 }
 currentQuiz.addEventListener('change', changeChoice)
+
+// Quiz Selection
+for (let tab of tabs) {
+    tab.addEventListener('click', () => {
+        for (let t of tabs) {
+            if (t.classList.contains('activetab')) {
+                t.classList.remove('activetab')
+            }
+        }
+        tab.classList.toggle('activetab')
+    })
+}
+
+const hideQzs = function () {
+    for (let q of quizPickers) {
+        q.classList.add('hidden')
+        q.classList.remove('activeQuiz')
+        quiz.innerHTML = ''
+    }
+}
+
+const showQz = function (selector) {
+    if (selector.classList.contains('hidden')) {
+        selector.classList.remove('hidden')
+        selector.classList.add('activeQuiz')
+        currentQuiz = document.querySelector('.activeQuiz .quizSelect')
+        changeChoice();
+    }
+}
+
+for (let i = 0; i < specificTabs.length; i++) {
+    specificTabs[i].addEventListener('click', function () {
+        hideQzs();
+        showQz(qzs[i])
+    })
+}
+
+
 // Populating Quiz
 const quizContainer = document.querySelector('#quizContainer')
 const quiz = document.querySelector('#quiz')
@@ -130,7 +135,7 @@ function shuffleArray(array) {
     }
 }
 const populateQuiz = function (obj) {
-    quiz.innerHTML = ''
+    quiz.innerHTML = '';
     i = 1;
     shuffleArray(obj.questions);
     for (let q of obj.questions) {
