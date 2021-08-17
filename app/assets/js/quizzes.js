@@ -467,3 +467,49 @@ let nodeQz = {
     ]
 }
 
+let expressQz = {
+    questions: [
+        '1.	What is express?',
+        '2.	What is common practice for setting up and requiring express?',
+        '3.	What method starts a server? Give an example using that method to set up a local host server.',
+        '4.	What method will run every time there is an incoming request, regardless of the path? Give an example of this method indicating what arguments are used.',
+        '5.	What are req and res?',
+        '6.	What res method returns an HTTP response? In your own words briefly describe what this means. Finally, can multiple responses be sent while dealing with this method?',
+        '7.	What res methods returns the rendered view of an html file? Describe the mandatory argument.',
+        '8.	What express method is used to respond to a specific path request? What arguments does this method expect?',
+        '9.	In express, what directory holds the files that will be used with res.render?',
+        '10. Can a .get request respond to a .post request, or vice versa?',
+        '11. What can be used in place of a path, to answer all route requests? Where should this be placed and why?',
+        '12. How do you write a variable path name? Add a reddit subreddit as an example.',
+        '13. What request object lets you pull out a variable path name as an object using destructuring? Give an example using a subreddit.',
+        '14. What is a query string? Where are they stored? What usually follows a query string (provide an example)?',
+        '15. What symbol is used to chain together multiple key value pairs after a query string? Provide an example.',
+        '16. How do you add one or more arguments after a res.render file name, to be used on the respective page?',
+        '17. What express method is used to configure settings? How would a setup the ability to use ejs files?',
+        '18. What does __dirname represent? What is the __ called?',
+        '19. How would a user setup the views folder to be referenced regardless of where the user is located while executing an index file?',
+        '20. How does a user serve static files from a directory named public, like css and javascript, or other files referenced in an html/ejs document? Where would the directory being served be located? How would a user serve the statis files from a directory while also setting up the absolute path for that directory?'
+    ],
+    answers: [
+        '1.	Express is a node.js framework, it is an npm package.',
+        '2.	const express = require(‘express’) const app = express()',
+        '3.	app.listen - example: app.listen(3000, () => {console.log(“listening on port 3000)}) the console.log part is not required, but useful to add.',
+        '4.	app.use - example: app.use((req, res) => {console.log(‘sploosh’)}',
+        '5.	Request and Response. Request is an object that refers to an incoming request, while Response is an object that refers to what will be sent back. Both contain methods related to their duties. ',
+        '6.	res.send(‘’) The .send method can respond with a Buffer object, a string, an object, Boolean, or an array. res.send renders a response. It will render written html, print strings, or return objects as .json. No, once a res.send has been sent, no more res.send or res.renders can be sent.',
+        '7.	res.render The mandatory argument is the view argument, or rather the file to be rendered. This can be an absolute path, or a path relative to the views setting.',
+        '8.	 app.get - It expects first the requested path, then a req, res function to run when the path has been requested. app.get(‘/path’, (req, res) => {res.render(‘index’)}',
+        '9.	views',
+        '10. No.',
+        '11. An asterisk, *. This should be at the bottom of a document, or it will override all other route setups.',
+        '12. Using : lets you use a variable path name. Subreddit example /r/:subreddit, in the example, r is consistent but anything after the : can change. ',
+        '13. req.params - Example const {subreddit} = req.params;',
+        '14. The portion of a url that comes after a question mark (?) and is stored in the req.query object. www.site.com/comments?sort=new',
+        '15. & can separate multiple key value pairs in a query string. www.site.com/comments?sort=new&sort=popular',
+        '16. After stating the file to be rendered, using key value pairs inside of curly brackets you can add arguments that set variables to be used in the rendered page.',
+        '17. app.set To use ejs files, first the ejs npm would need to be installed, and then required on the index page. Then app.set(‘view engine’, ‘ejs’)',
+        '18. __dirname refers to the absolute path to the file that is being executed. A dunder.',
+        '19. First, require the paths module at the top of the page, then use app.set(‘views’, path.join(__dirname, ‘/views’)',
+        '20. app.use(express.static(‘public’) In the root folder, alongside node_modules, views and the index.js file. app.use(express.static(path.join(__dirname, ‘public’)))',
+    ]
+}

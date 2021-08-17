@@ -69,14 +69,8 @@ function changeChoice() {
         case 'node':
             choice = nodeQz;
             break;
-        case '':
-            choice = Quiz;
-            break;
-        case '':
-            choice = Quiz;
-            break;
-        case '':
-            choice = Quiz;
+        case 'express':
+            choice = expressQz;
             break;
         default:
     }
@@ -95,6 +89,7 @@ for (let tab of tabs) {
     })
 }
 
+// hide previous quiz options
 const hideQzs = function () {
     for (let q of quizPickers) {
         q.classList.add('hidden')
@@ -103,11 +98,13 @@ const hideQzs = function () {
     }
 }
 
+// Show quiz options and functionality for choosing quizzes
 const showQz = function (selector) {
     if (selector.classList.contains('hidden')) {
         selector.classList.remove('hidden')
         selector.classList.add('activeQuiz')
         currentQuiz = document.querySelector('.activeQuiz .quizSelect')
+        currentQuiz.addEventListener('change', changeChoice)
         changeChoice();
     }
 }
@@ -152,12 +149,17 @@ const populateQuiz = function (obj) {
         quiz.append(qContain)
         i++;
     }
-    let checkQuiz = document.createElement('button')
-    checkQuiz.innerText = 'Check Answers'
-    quiz.append(checkQuiz)
 }
 
 getQuiz.addEventListener('click', function () {
     populateQuiz(choice)
 })
+
+const getAnswers = document.querySelector('#getAnswers')
+
+const answerSheet = function () {
+    let answers = document.querySelectorAll('.answer')
+}
+
+getAnswers.addEventListener('click', answerSheet)
 
