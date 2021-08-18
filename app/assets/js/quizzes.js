@@ -513,3 +513,30 @@ let expressQz = {
         '20. app.use(express.static(‘public’) In the root folder, alongside node_modules, views and the index.js file. app.use(express.static(path.join(__dirname, ‘public’)))',
     ]
 }
+
+let expressRestQz = {
+    questions: [
+        '1.	What are four defining features of a GET request?',
+        '2.	What are four defining features of a POST request?',
+        '3.	What request object lets a user access data from a POST request?',
+        '4.	What are two middleware options for parsing information from the req.body object? What do they do, and which method is used to set them up?',
+        '5.	What do REST and RESTful mean?',
+        '6.	Using blogs as the key url resource, list the 7 Route Names, the urls that would match them, the HTTP verbs that would go with them, and finally the description of what they do. Route- URL- HTTP- Description-.',
+        '7.	What response method is used to send a user to another route after servicing a request route? What kind of HTTP verb does it default to?',
+        '8.	When using links on an html page, how would the dev fill in the href attribute to access specific routes?',
+        '9.	What package lets you use other http verbs inside your html form, such as DELETE or PATCH?',
+
+    ],
+    answers: [
+        '1.	Used to retrieve or get information. Data sent via query string. Information is plainly visible in the URL. Limited amount of data can be sent.',
+        '2.	Used to post data to the server. Used to write/create/update. Data is sent via request body, not a query string. Can send any sort of data (json)',
+        '3.	req.body',
+        '4.	express.json() and express.urlencoded({extended:true}) json will parse json information and urlencoded will parse the information as objects with key value pairs. The method .use is used to set them up, because it will run every time a request is made.',
+        '5.	Representational state transfer. A set of guidelines for how a client + server should communicate and perform CRUD operations on a given resource. Restful implies a system that complies with REST',
+        '6.	Route- Index URL- /blogs HTTP- GET Description- Display a list of all blogs, Route- New URL- /blog/new HTTP- GET Description- Show form to make new blogs, Route- Create URL- /blogs HTTP- POST Description- Add a new blog to database, then redirect, Route- Show URL- /blogs/:id HTTP- GET Description- Show info about one blog, Route- Edit URL- /blogs/:id/edit HTTP- GET Description- Show edit form of one blog, Route- Update URL- /blogs/:id  HTTP- PUT or PATCH Description- Update a particular blog, then redirect, Route- Destroy URL- /blogs/:id HTTP- DELETE Description- Delete a particular blog, then redirect.',
+        '7.	res.redirect([status optional], path) Defaults as a GET request.',
+        '8.	Using the relative path, such as /comments or /newPost etc.',
+        '9.	Method Override'
+
+    ]
+}
