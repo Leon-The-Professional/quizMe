@@ -1,5 +1,5 @@
 const tabs = document.querySelectorAll('.tabs')
-const quizPickers = document.querySelectorAll('.quizPicker')
+const quizDivs = document.querySelectorAll('.quizDiv')
 
 let specificTabs = [
     htmlTab = document.querySelector('#htmlTab'),
@@ -94,7 +94,7 @@ for (let tab of tabs) {
 
 // hide previous quiz options
 const hideQzs = function () {
-    for (let q of quizPickers) {
+    for (let q of quizDivs) {
         q.classList.add('hidden')
         q.classList.remove('activeQuiz')
         quiz.innerHTML = ''
