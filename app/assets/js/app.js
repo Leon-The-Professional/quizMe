@@ -10,7 +10,7 @@ let specificTabs = [
     miscTab = document.querySelector('#miscTab')
 ]
 
-let qzs = [
+let quizSections = [
     htmlQ = document.querySelector('#htmlQ'),
     cssQ = document.querySelector('#cssQ'),
     jsQ = document.querySelector('#jsQ'),
@@ -46,24 +46,18 @@ function changeChoice() {
         case 'mediaQueries':
             choice = mediaQueryQuiz;
             break;
-        case 'cssVariables':
-            choice = Quiz;
-            break;
-        case 'cssMethods':
-            choice = Quiz;
-            break;
         //  JavaScript quizzes
-        case '':
-            choice = Quiz;
+        case 'strings':
+            choice = StringsQuiz;
             break;
-        case '':
-            choice = Quiz;
+        case 'operators':
+            choice = OperatorsQuiz;
             break;
-        case '':
-            choice = Quiz;
+        case 'arrays':
+            choice = ArraysQuiz;
             break;
-        case '':
-            choice = Quiz;
+        case 'loops':
+            choice = LoopsQuiz;
             break;
         //  Backend quizzes
         case 'node':
@@ -115,7 +109,7 @@ const showQz = function (selector) {
 for (let i = 0; i < specificTabs.length; i++) {
     specificTabs[i].addEventListener('click', function () {
         hideQzs();
-        showQz(qzs[i])
+        showQz(quizSections[i])
     })
 }
 
