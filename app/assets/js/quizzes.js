@@ -664,3 +664,48 @@ let expressRestQz = {
 
     ]
 }
+
+let mongoQz = {
+    questions: [
+        '1.	What is a database?',
+        '2.	What is a SQL database?',
+        '3.	What is a NoSQL database?',
+        '4.	How does a user start a mongo database, and how does a user open the mongo shell?',
+        '5.	What command will list useful mongo command prompts?',
+        '6.	What command lets a user view all the databases available in mongo?',
+        '7.	What command can either select which database to use or create a new one if the specified database does not yet exist?',
+        '8.	What is the command insert() used for?',
+        '9.	What does the command find() do? What does findOne() do differently?',
+        '10. What does the command update() do?',
+        '11. What does the command remove() do, and what does the addition of .limit() on the end do?',
+        '12. What command will update the first thing that matches specified criteria? Which command will update multiple matches?',
+        '13. What are the operators for greater than, greater than or equal too, less than, and less than or equal to?',
+        '14. What are the operators for includes, does NOT include and at least ONE is included?',
+        '15. How does a user search for nested cosntent? Provide an example.',
+        '16. What are the most common ways Mongo stores data?',
+        '17. What is the command for inserting a new object into a collection? ',
+        '18. What operator replaces the value of a field with a ne specified value (or creates a new one if no current value exists? Provide an example of adding an age of 5 to a dog named Charlie in a dogs collection.',
+        '19. What operator will update the lastModified descriptor of an object to the current date?',
+    ],
+    answers: [
+        '1.	A collection of information/data that has an interface a user can write code to interact with.',
+        '2.	Structured Query Language. A relational database that is tabular and flat. Tables are used to define everything. Not particularly flexible but have been around longer.',
+        '3.	Not a Structured Query Language, non-relational. Can store different types of data including documents, key-value pairs, and graph stores. Can be nested. Document oriented database.',
+        '4.	In a terminal, mongod will run the database, keep this terminal separate. In a different terminal mongo will open the mongo shell.',
+        '5.	help',
+        '6.	show dbs',
+        '7.	use dbName',
+        '8.	Is used to create something inside of a database. Use {} to create objects inside the parenthesis.',
+        '9.	Inside the parenthesis use {} to describe what you’re looking for. If you don’t pass anything into the {} specifically, it lists everything inside. Case sensitive. Returns a cursor (reference) to the objects searched for. Using commas you can include multiple search parameters. Using findONE() will return a single document.',
+        '10. First you set an identifier, then you set what you want to update. NOTE: if you don’t want to erase all of the object’s information you must include $set: {and put the update here}. Remember the set addition is added after the first { is written.',
+        '11. Delete objects. Use {} to identify what you’re deleting. If you add .limit() to the end, you can choose how many of that thing to delete, putting the number in the parenthesis. ',
+        '12. updateOne(<filter>, <update>, <options>) – Will update the first thing that matches the criteria. updateMany(<filter>, <update>, <options>) – Will update all',
+        '13. {$gt: ##}, {$gte: ##}, {$lt: ##}, {$gte: ##}',
+        '14. { $in: [‘identifier’, ‘identifier’]}, { $nin: [‘identifier’, ‘identifier’]}, {$or: [{identifier: }, {identifier: }}',
+        '15. Use quotes and list the name of the nested content’s parent with a . then the value you’re looking for: db.dogs.find({‘personality.childFriendly’: true})',
+        '16. JSON and BSON. BSON is a binary version of JSON that takes up less space.',
+        '17. db.collectionName.insert()',
+        '18. $set db.dogs.updateOne({name: "Charlie"}, {$set: {age: 5, }})',
+        '19. $currentDate'
+    ]
+}

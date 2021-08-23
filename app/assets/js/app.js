@@ -69,6 +69,9 @@ function changeChoice() {
         case 'expressRest':
             choice = expressRestQz;
             break;
+        case 'mongo':
+            choice = mongoQz;
+            break;
         default:
     }
 }
