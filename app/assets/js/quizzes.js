@@ -100,9 +100,14 @@ let formsGenQz = {
 }
 let tablesQuiz = {
     questions: [
-        'What are the proper semantic element names for a table?',
-        'What attributes adjust the size of cells in a table?',
-        'What are the four key tags used in creating a table, and what do they all refer to?',
+        '1. What are the proper semantic element names used to organize the layout of a table?',
+        '2. What attributes adjust the size of cells in a table?',
+        '3. What are the four key tags used in creating a table, and what do they all refer to?',
+    ],
+    answers: [
+        '1. thead, tfoot, tbody',
+        '2. colspan, rowspan',
+        '3. <table> <thead>, <td>, <tr>'
     ]
 }
 //CSS
@@ -213,7 +218,7 @@ let StringsQuiz = {
     questions: [
         '1.	What syntax is used to access a character in a string by its index?',
         '2.	What property can be chained on to a variable (or a string in quotes) to tell you how many characters it has?',
-        '3.	What operator can be used to check the type of a variable?',
+        '3.	What method can be used to check the type of a variable? Give an example of using this method while console logging a string',
         '4.	Other than looking up the docs on MDN or W3, what’s a way to check what string methods exist?',
         '5.	Concerning syntax, what’s a good way to tell if you are accessing a property vs executing a method?',
         '6.	What method will take a string and create a new version of it in all caps?',
@@ -229,7 +234,7 @@ let StringsQuiz = {
     answers: [
         '1.	varName[indexNumber] animal[2] = g.',
         '2.	variable.length “string”.length',
-        '3.	typeof variable typeof “string” typeof 45',
+        '3.	typeof console.log(typeof “string”)',
         '4.	In the dev tools console on chrome (and probably other browsers, type in a string followed by a dot and a list of string methods will appear. “hello”.',
         '5.	Whether or not there are parenthesis at the end. example.trim() vs example.length',
         '6.	.toUpperCase()',

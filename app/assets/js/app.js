@@ -18,6 +18,7 @@ let quizSections = [
     backendQ = document.querySelector('#backendQ'),
     miscQ = document.querySelector('#miscQ')
 ]
+
 // Establishing Quiz Selected
 let currentQuiz = document.querySelector('.activeQuiz .quizSelect')
 let choice = formsGenQz;
@@ -111,8 +112,14 @@ const showQz = function (selector) {
 
 for (let i = 0; i < specificTabs.length; i++) {
     specificTabs[i].addEventListener('click', function () {
+        quizContainer.classList.remove('hidden')
+        if (!getAnswers.classList.contains('hidden')) {
+            getAnswers.classList.add('hidden')
+        }
         hideQzs();
         showQz(quizSections[i])
+        answerContainer.classList.add('hidden')
+        answerContainer.innerHTML = '';
     })
 }
 
@@ -142,13 +149,14 @@ const populateQuiz = function (obj) {
         question.innerHTML = q;
         qContain.append(question);
         question.classList.add('question')
-        let answer = document.createElement('textarea')
-        answer.setAttribute('rows', '5')
-        qContain.append(answer)
-        answer.classList.add('answer')
+        let answerArea = document.createElement('textarea')
+        answerArea.setAttribute('rows', '5')
+        qContain.append(answerArea)
+        answerArea.classList.add('answer')
         quiz.append(qContain)
         i++;
     }
+    getAnswers.classList.remove('hidden')
 }
 
 getQuiz.addEventListener('click', function () {
@@ -156,9 +164,39 @@ getQuiz.addEventListener('click', function () {
 })
 
 const getAnswers = document.querySelector('#getAnswers')
+let answers = [];
+let answerValues = [];
+const answerContainer = document.querySelector('#answerContainer')
+
 
 const answerSheet = function () {
-    let answers = document.querySelectorAll('.answer')
+    quizContainer.classList.add('hidden')
+    answers = Array.from(document.querySelectorAll('.answer'))
+    answerValues = []
+    for (let a of answers) {
+        answerValues.push(a.value)
+    }
+    for (let i = 0; i < choice.questions.length; i++) {
+        let aContain = document.createElement('div')
+        aContain.classList.add('acontain')
+        let qRepeat = document.createElement('p')
+        qRepeat.innerText = choice.questions[i]
+        let userAnswer = document.createElement('p')
+        userAnswer.innerText = answerValues[i]
+        let answerAnswer = document.createElement('p')
+        for (let a of choice.answers) {
+            if (a[0] === choice.questions[i][0] && a[1] === choice.questions[i][1]) {
+                answerAnswer.innerText = a;
+                console.log(a[0])
+            }
+        }
+        aContain.append(qRepeat)
+        aContain.append(userAnswer)
+        aContain.append(answerAnswer)
+        answerContainer.append(aContain)
+    }
+    getAnswers.classList.add('hidden')
+    answerContainer.classList.remove('hidden')
 }
 
 getAnswers.addEventListener('click', answerSheet)
