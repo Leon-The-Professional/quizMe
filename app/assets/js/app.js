@@ -73,6 +73,9 @@ function changeChoice() {
         case 'mongo':
             choice = mongoQz;
             break;
+        case 'mongoose':
+            choice = mongooseQz;
+            break;
         default:
     }
 }

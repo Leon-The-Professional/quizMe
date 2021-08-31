@@ -714,3 +714,47 @@ let mongoQz = {
         '19. $currentDate'
     ]
 }
+
+let mongooseQz = {
+    key: 'Amadeus, 1986, 9.2, R. Amelie, 2001, 8.3, R. Moonrise Kingdom, 2012, 7.3, pg- 13.',
+    questions: [
+        '1.	What does ODM stand for, what does it do?',
+        '2.	What is Mongoose?',
+        '3.	How does a user setup mongoose and connect to a mongo database?',
+        '4.	What are Mongoose Models?',
+        '5.	What two rules should be followed when turning a schema into a model in regards to naming?',
+        '6.	Provide an example of setting up a movie schema(3 key code segments) and provide an example of creating an Amadeus model according to that schema(a 4th code segment).',
+        '7.	After defining a new class according to a Model, what method must be called on it to actually save the new class to the database? Use the movie model and Amadeus as the class for an example.',
+        '8.	What method can be used to create multiple different instances of a model at one time and add them to a db without using the .save method? Provide an example that includes Amelie and Moonrise Kingdom being added as Movie models.',
+        '9.	What method can be used to search a model collection for a specific instance based on parameters or to list all instances in a selection? How is the data retrieved? What similarly named method will only return the first matched result?',
+        '10. What method is used to update one(or the first matching) object in a model? ',
+        '11. What method can update one(or the first matching) object and return the data of the object pre update? What can be added on to show the updated version instead?',
+        '12. What method can remove an object? What method can remove an object and return data on what was removed?',
+        '13. When schema option indicates that a value be required? Provide an example.',
+        '14. What method can be set up for handling errors?',
+        '15. When updating how does the user tell Mongoose to check validators again? ',
+        '16. How does the user setup custom error messages to go along with validation properties such as min or max?',
+        '17. How do you define a schema instance method? What does the keyword ‘this’ refer to in one of these methods?',
+        '18. How do you define a model static method? What does the keyword ‘this’ refer to in one of these methods?',
+    ],
+    answers: [
+        '1.	Object Data Mapper. ODMs map documents coming from a database into usable JavaScript objects.',
+        '2.	Mongoose is an ODM for MongoDB that provides ways to model out application data and define a schema. It offers easy ways to validate data and build complex queries from the comfort of JavaScript.',
+        '3.	Download the mongoose npm. Then, const mongoose = require(‘mongoose’) and mongoose.connect(‘mongodb://localhost:27017/databaseName’, {useNewUrlParser: true, useUnifiedTopology: true});',
+        '4.	Models are javaScript classes that we make with the assistance of mongoose that represent information in a mongo database, or specifically in a collection.',
+        '5.	The name of the model should be singular and the first letter should be uppercase.',
+        '6.	const { Schema } = mongoose; const movieSchema = new Schema({title: String, year: Number, score: Number, rating: String }); const Movie = mongoose.model(‘Movie’, movieSchema); const Amadeus = new Movie({title:’Amadeus’, year: 1986, score: 9.2, rating: ‘R’})',
+        '7.	.save() i.e. Amadeus.save()',
+        '8.	.insertMany([]) Movie.insertMany([ { title: ‘Amelie’, year: 2001, score: 8.3, rating: ‘R’}, { title: ‘Moonrise Kingdom’, year: 2012, score: 7.3, rating: ‘PG-13} ])',
+        '9.	.find({searchkey: searchvalue}).then(data => {console.log(data)} The .then is used to pull out and use the data from the search. If no parameters are included in the curly brackets (the {searchkey: searchvalue} data will include all instances of the model. The .findOne({}) method will either return the first matched result or if no search params are included, the first model instance.',
+        '10. .updateOne({searchquery: value}, {valueToUpdate: value})',
+        '11. .findOneAndUpdate({searchquery: value}. {valueToUpdate: value}, {new: true}).then(data => {})',
+        '12. .delete({searchquery: value}) .findOneAndDelete({searchquery: value}.then(data => {})',
+        '13. name: { type: String, required: true}',
+        '14. .catch(err => {})',
+        '15. In the options section of the update method (the third set of curly brackets), include runValidators: true',
+        '16. Enter the min or max values inside of an array, where the first item in the array is the ‘check’ and the second item in the array is the custom error message for if that validation fails.',
+        '17. schemaName.methods.customMethodName = function() {} ‘This’ refers to the model instance the method is being called on.',
+        '18. schemaName.static.customMethodName = function() {} ‘This’ refers to the model itself.'
+    ]
+}
