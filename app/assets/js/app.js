@@ -183,8 +183,11 @@ const answerSheet = function () {
         let aContain = document.createElement('div')
         aContain.classList.add('acontain')
         let qRepeat = document.createElement('p')
+        qRepeat.classList.add('aSheetP')
         qRepeat.innerText = choice.questions[i]
         let userAnswer = document.createElement('p')
+        userAnswer.classList.add('answerP')
+        userAnswer.classList.add('aSheetP')
         userAnswer.innerText = answerValues[i]
         let answerAnswer = document.createElement('p')
         for (let a of choice.answers) {
@@ -193,6 +196,7 @@ const answerSheet = function () {
                 console.log(a[0])
             }
         }
+        answerAnswer.classList.add('aSheetP')
         aContain.append(qRepeat)
         aContain.append(userAnswer)
         aContain.append(answerAnswer)

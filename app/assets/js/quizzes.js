@@ -16,7 +16,7 @@ let formsInpQz = {
         '10. What input type gives the user access to a slider?',
         '11. What input type is not visible to a user, allowing the dev to include other information on a form submit?',
     ],
-    answer: [
+    answers: [
         '1. <input type =”text”>',
         '2. <input type =“checkbox”>',
         '3. <input type =”radio”>',
@@ -49,7 +49,7 @@ let formsInpAttQz = {
         '14. What does the attribute <em>pattern</em> do, provide an example of the syntax',
         '15. What does the attribute <em>autofocus</em> do, provide an example of the syntax',
     ],
-    answer: [
+    answers: [
         '1.	Starts a checkbox as checked on load. <input type=”checkbox” checked>',
         'Specify that the input cannot be selected or modified and the value will not be sent with a submit action <input type=”text” disabled>',
         '3. Specifies that an input cannot be modified (however, a user can tab to it, highlight it, and copy the text from it)..<input type=”text” readonly>',
@@ -83,7 +83,7 @@ let formsGenQz = {
         '10. What javascript function will prevent a form from submitting to a server?',
         '11. What element is used to specify a field of some type that a user can enter data?'
     ],
-    answer: [
+    answers: [
         '1.	<select> and <option>',
         '2.	<textarea col=30 row=50>',
         '3.	<predetermined>',
@@ -107,7 +107,7 @@ let tablesQuiz = {
     answers: [
         '1. thead, tfoot, tbody',
         '2. colspan, rowspan',
-        '3. <table> <thead>, <td>, <tr>'
+        '3. <table>, <thead> table head, <td> table data, <tr> table row'
     ]
 }
 //CSS
