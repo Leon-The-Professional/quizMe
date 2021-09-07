@@ -11,18 +11,17 @@
 
 <body>
     <h1 class="text-center">QuizMe</h1>
-
+    <div id="tabContainer">
+        <div class="tabs activetab" id="htmlTab" title="Hypertext Markup Language">HTML</div>
+        <div class="tabs" id="cssTab" title="Cascading Style Sheets">CSS</div>
+        <div class="tabs" id="jsTab" title="JavaScript">JS</div>
+        <div class="tabs" id="gitTab" title="Git and GitHub">Git</div>
+        <div class="tabs" id="backendTab" title="Backend">BE</div>
+        <div class="tabs" id="miscTab" title="Miscellaneous">Misc</div>
+    </div>
     <section id="Quizzes">
-        <div id="tabContainer">
-            <div class="tabs activetab" id="htmlTab" title="Hypertext Markup Language">HTML</div>
-            <div class="tabs" id="cssTab" title="Cascading Style Sheets">CSS</div>
-            <div class="tabs" id="jsTab" title="JavaScript">JS</div>
-            <div class="tabs" id="gitTab" title="Git and GitHub">Git</div>
-            <div class="tabs" id="backendTab" title="Backend">BE</div>
-            <div class="tabs" id="miscTab" title="Miscellaneous">Misc</div>
-        </div>
         <div id="quizContainer">
-            <h3>Pick a Quiz Topic</h3>
+            <h3 class="text-center">Pick a Quiz Topic</h3>
             <div id="htmlQ" class="quizDiv activeQuiz">
                 <select name="" class="quizSelect" id="htmlQzs">
                     <option value="formGen">Forms - General</option>
