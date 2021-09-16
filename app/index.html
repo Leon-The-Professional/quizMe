@@ -22,66 +22,70 @@
     <section id="Quizzes">
         <div id="quizContainer">
             <h3 class="text-center">Pick a Quiz Topic</h3>
-            <div id="htmlQ" class="quizDiv activeQuiz">
-                <select name="" class="quizSelect" id="htmlQzs">
-                    <option value="formGen">Forms - General</option>
-                    <option value="inpTyp">Forms - Input Types</option>
-                    <option value="inpAtt">Forms - Input Attributes</option>
-                    <option value="tables">Tables</option>
-                </select>
-            </div>
-            <div id="cssQ" class="quizDiv hidden">
-                <select name="" class="quizSelect" id="cssQzs">
-                    <option value="flexbox">Flexbox</option>
-                    <!-- <option value="grid">Grid</option> -->
-                    <option value="mediaQueries">Media Queries</option>
-                    <!-- <option value="cssVariables">CSS Variables</option>
+            <div class="selectionBox">
+                <div id="htmlQ" class="quizDiv activeQuiz">
+                    <select name="" class="quizSelect" id="htmlQzs">
+                        <option value="formGen">Forms - General</option>
+                        <option value="inpTyp">Forms - Input Types</option>
+                        <option value="inpAtt">Forms - Input Attributes</option>
+                        <option value="tables">Tables</option>
+                    </select>
+                </div>
+                <div id="cssQ" class="quizDiv hidden">
+                    <select name="" class="quizSelect" id="cssQzs">
+                        <option value="flexbox">Flexbox</option>
+                        <!-- <option value="grid">Grid</option> -->
+                        <option value="mediaQueries">Media Queries</option>
+                        <!-- <option value="cssVariables">CSS Variables</option>
                     <option value="cssMethods">CSS Methods</option> -->
-                </select>
+                    </select>
+                </div>
+                <div id="jsQ" class="hidden quizDiv">
+                    <select name="" class="quizSelect" id="jsQzs">
+                        <!-- <option value="">General JavaScript Terminology</option> -->
+                        <option value="strings">String Methods</option>
+                        <!-- <option value="">Math Object</option> -->
+                        <option value="arrays">Arrays</option>
+                        <option value="loops">Loops</option>
+                        <option value="operators">Operators</option>
+                        <!-- <option value="">Higher Order Functions</option> -->
+                        <!-- <option value="">Try Catch</option> -->
+                        <!-- <option value="">Switch Case</option> -->
+                        <!-- <option value="">Manipulating Object Literals</option> -->
+                        <!-- <option value="">Events and Event Listeners</option> -->
+                        <!-- <option value="">Promises</option> -->
+                        <!-- <option value="">Async Functions</option> -->
+                    </select>
+                </div>
+                <div id="gitQ" class="hidden quizDiv">
+                    <select name="" class="quizSelect" id="gitQzs">
+                        <option value="">Git Quiz 1</option>
+                        <option value="">Git Quiz 2</option>
+                        <option value="">Git Quiz 3</option>
+                        <option value="">GitHub Quiz 1</option>
+                        <option value="">GitHub Quiz 2</option>
+                    </select>
+                </div>
+                <div id="backendQ" class="hidden quizDiv">
+                    <select name="" class="quizSelect" id="backQzs">
+                        <option value="node">Node.js</option>
+                        <option value="express">Express</option>
+                        <option value="expressRest">Restful Express</option>
+                        <option value="mongo">MongoDB</option>
+                        <option value="mongoose">Mongoose</option>
+                    </select>
+                </div>
+                <div id="miscQ" class="hidden quizDiv">
+                    <select name="" class="quizSelect" id="miscQzs">
+                        <option value="">Abbreviations</option>
+                    </select>
+                </div>
+                <button id="getQuiz">Get Quiz</button>
             </div>
-            <div id="jsQ" class="hidden quizDiv">
-                <select name="" class="quizSelect" id="jsQzs">
-                    <!-- <option value="">General JavaScript Terminology</option> -->
-                    <option value="strings">String Methods</option>
-                    <!-- <option value="">Math Object</option> -->
-                    <option value="arrays">Arrays</option>
-                    <option value="loops">Loops</option>
-                    <option value="operators">Operators</option>
-                    <!-- <option value="">Higher Order Functions</option> -->
-                    <!-- <option value="">Try Catch</option> -->
-                    <!-- <option value="">Switch Case</option> -->
-                    <!-- <option value="">Manipulating Object Literals</option> -->
-                    <!-- <option value="">Events and Event Listeners</option> -->
-                    <!-- <option value="">Promises</option> -->
-                    <!-- <option value="">Async Functions</option> -->
-                </select>
-            </div>
-            <div id="gitQ" class="hidden quizDiv">
-                <select name="" class="quizSelect" id="gitQzs">
-                    <option value="">Git Quiz 1</option>
-                    <option value="">Git Quiz 2</option>
-                    <option value="">Git Quiz 3</option>
-                    <option value="">GitHub Quiz 1</option>
-                    <option value="">GitHub Quiz 2</option>
-                </select>
-            </div>
-            <div id="backendQ" class="hidden quizDiv">
-                <select name="" class="quizSelect" id="backQzs">
-                    <option value="node">Node.js</option>
-                    <option value="express">Express</option>
-                    <option value="expressRest">Restful Express</option>
-                    <option value="mongo">MongoDB</option>
-                    <option value="mongoose">Mongoose</option>
-                </select>
-            </div>
-            <div id="miscQ" class="hidden quizDiv">
-                <select name="" class="quizSelect" id="miscQzs">
-                    <option value="">Abbreviations</option>
-                </select>
-            </div>
-            <button id="getQuiz">Get Quiz</button>
             <div id="quiz"></div>
-            <button id="getAnswers" class="hidden">Check Answers</button>
+            <div class="selectionBox">
+                <button id="getAnswers" class="hidden">Check Answers</button>
+            </div>
         </div>
         <div id="answerContainer" class="hidden">
     </section>

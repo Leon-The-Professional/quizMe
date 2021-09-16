@@ -71,7 +71,7 @@ let formsInpAttQz = {
 let formsGenQz = {
     key: '',
     questions: [
-        '1 What element is used to let a user select from predetermined options in a dropdown list? What tag would be used to create predetermined option?',
+        '1. What element is used to let a user select from predetermined options in a dropdown list? What tag would be used to create predetermined option?',
         '2. What element gives a larger area for users to write text into, and how do you specify its size?',
         '3. What element also gives a dropdown list of predetermined options but does so as suggestions and still allows the user to type in their own answer?',
         '4. What does the form attribute ‘action’ refer to, what property might it hold?',

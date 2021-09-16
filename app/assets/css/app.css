@@ -11,9 +11,10 @@ p {
     --windowOut:#810000;
     --backTabs:#620300;
     --windowIn:#EEEBDD;
+    --textHover:#fad5a4;
     --border:#630000;
     --BG:#1B1717;
-    --text: #630000;
+    --text: #900000;
 }
 
 .text-center {
@@ -41,7 +42,7 @@ button:hover {
     width: 80%;
     min-width: 480px;
     min-height: 100px;
-    border: 2px solid var(--border);
+    border: 3px solid var(--border);
     border-radius: 3px;
     margin: 0 auto;
     z-index: 2;
@@ -50,7 +51,7 @@ button:hover {
 
 #tabContainer{
     position: relative;
-    top: .1rem;
+    top: .2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -58,6 +59,9 @@ button:hover {
 }
 
 .tabs{
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    text-align: center;
     width: 100px;
     border: 2px solid var(--backTabs);
     border-top-right-radius: 15px;
@@ -71,13 +75,12 @@ button:hover {
 
 .tabs:hover {
     transition: all .3s;
-    background: #abb2ba;
+    background: var(--text);
     cursor:pointer;
+    color: var(--textHover);
+    text-shadow: 2px 2px 5px black;
 }
 
-.hidden{
-    display: none;
-}
 
 .activetab {
     background: var(--windowOut);
@@ -87,50 +90,75 @@ button:hover {
 
 .activetab:hover {
     background: var(--windowOut);
-    text-shadow: 2px 2px 5px black;
-    color: steelblue;
 }
 
 #quizContainer {
     z-index: 2;
     color: var(--text);
     background: var(--windowIn);
+    border: 3px solid var(--border);
     border-radius: 3px;
     width: 90%;
     margin: 5% auto;
-    padding: 5%;
+    padding: 3%;
     box-sizing: border-box;
 }
 
 #quizContainer button {
     margin: 2% 0;
-    min-width: 5rem;
+    font: var(--windowIn);
+    font-size: 1.2rem;
+    min-width: 10rem;
     min-height: 2rem;
-    background: #708090;
+    background: var(--backTabs);
     color: whitesmoke;
     letter-spacing: .2em;
+    border-radius: 10px;
 }
 
-#quizContainer button:active {
-    background: #4e6984;
+#quizContainer button:hover {
+    background: var(--windowOut);
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+#quizContainer #getAnswers {
+    margin-top: 5%;
+}
+
+.quizDiv{
+    width: 200px;
+    margin: 0;
 }
 
 .quizDiv select{
-    min-width: 5rem;
-    height: 1.5rem;
+    height: 2rem;
     margin: 2% 0;
+}
+
+.selectionBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 /* quiz sheet */
 
+#quiz {
+    margin: 2%;
+}
 .qcontain{
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin-top: 5%;
 }
 
 .question {
+    font-size: 1.2rem;
     width: 45%;
 }
 
@@ -142,27 +170,37 @@ button:hover {
 
 #answerContainer {
     z-index: 2;
-    background: white;
+    background: var(--windowIn);
     width: 90%;
-    margin: 5% auto;
+    margin: 5%;
     box-sizing: border-box;
+    padding: 2% 0;
 }
 
 .acontain{
+    display: block;
+    background: white;
+    width: 85%;
     display: flex;
     flex-direction: column;
-    margin-top: 1%;
+    margin: 3% auto;
     text-align: center;
-    border: 2px inset royalblue;
+    border: 2px solid rgb(209, 77, 77);
+    border-radius: 15px;
+    box-sizing: border-box;
 }
 
 .aSheetP {
     margin: none;
-    padding: 1em 0;
+    padding: 1em;
 }
 
 .answerP {
-    background: skyblue;
+    background: rgb(208, 208, 208);
+}
+
+.hidden{
+    display: none;
 }
 
 @media screen and (max-width: 1070px) {
