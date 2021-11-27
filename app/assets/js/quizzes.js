@@ -71,7 +71,7 @@ let formsInpAttQz = {
 let formsGenQz = {
     key: '',
     questions: [
-        '1. What element is used to let a user select from predetermined options in a dropdown list? What tag would be used to create predetermined option?',
+        '1. What element is used to let a user select from predetermined options in a dropdown list? What tag would be used to create a predetermined option?',
         '2. What element gives a larger area for users to write text into, and how do you specify its size?',
         '3. What element also gives a dropdown list of predetermined options but does so as suggestions and still allows the user to type in their own answer?',
         '4. What does the form attribute ‘action’ refer to, what property might it hold?',
@@ -174,7 +174,7 @@ let ArraysQuiz = {
         '7.	Destructuring an array is a JavaScript expression that makes it possible to unpack values from arrays(or properties from obejects) into distinct variables.You can destructure more than one array at once, the syntax is square brackets containing the new names of the array items as variables, followed by an equal sign and then either the name of the array or an actual array. a.	[a, b] = [10, 20] which would make a = 10 and b = 20. If let Arr = [10, 20] then[a, b] = Arr would have the same outcome.',
         '8. .concat() No it is not destructive.',
         '9. .join() defaults to commas.To specify a different separator, include the separator surround by quotes as the argument in .join().This is not destructive examples: .join(‘’).join(‘-‘).join(‘ ‘)',
-        '10. .includes() strings would be searched for with ‘’ and numbers can be searched for without them.No it is not destructive.',
+        '10. .includes() strings would be searched for with ‘’ and numbers can be searched for without them. No it is not destructive.',
         '11. .reverse() Yes it is destructive.',
         '12. .indexOf() No it is not destructive.',
         '13. .slice() If no second number is listed then only the items up to the specified first parameter are removed and the rest remain.No it is not destructive.example.slice(2).slice(5, 9)',

@@ -89,7 +89,7 @@ for (let tab of tabs) {
                 t.classList.remove('activetab')
             }
         }
-        tab.classList.toggle('activetab')
+        tab.classList.add('activetab')
     })
 }
 
@@ -131,6 +131,7 @@ for (let i = 0; i < specificTabs.length; i++) {
 const quizContainer = document.querySelector('#quizContainer')
 const quiz = document.querySelector('#quiz')
 const getQuiz = document.querySelector('#getQuiz')
+const randomize = document.querySelector('#randomize')
 // let randNum = function () { Math.random() * 10 }
 // Durstenfeld Shuffle 
 function shuffleArray(array) {
@@ -144,8 +145,21 @@ function shuffleArray(array) {
 const populateQuiz = function (obj) {
     quiz.innerHTML = '';
     i = 1;
-    shuffleArray(obj.questions);
-    for (let q of obj.questions) {
+    let tempArray = [...obj.questions]
+    if (randomize.checked) {
+        shuffleArray(tempArray);
+    } else {
+        tempArray = obj.questions
+    }
+    if (obj.key) {
+        let kContain = document.createElement('div');
+        kContain.classList.add('kContain');
+        let key = document.createElement('p');
+        key.innerHTML = `<strong>Additional Info:</strong> ${obj.key}`;
+        kContain.append(key);
+        quiz.append(kContain);
+    }
+    for (let q of tempArray) {
         let qContain = document.createElement('div')
         qContain.classList.add('qcontain')
         let question = document.createElement('p')
@@ -184,19 +198,31 @@ const answerSheet = function () {
         aContain.classList.add('acontain')
         let qRepeat = document.createElement('p')
         qRepeat.classList.add('aSheetP')
-        qRepeat.innerText = choice.questions[i].slice(3).trim()
+        const qKey = document.createElement('p')
+        qKey.classList.add('answerKey')
+        qKey.innerText = 'Question ';
+        qRepeat.innerHTML = choice.questions[i].slice(3).trim();
+        qRepeat.prepend(qKey)
         let userAnswer = document.createElement('p')
         userAnswer.classList.add('answerP')
         userAnswer.classList.add('aSheetP')
         userAnswer.innerText = answerValues[i]
+        const uaKey = document.createElement('p')
+        uaKey.classList.add('answerKey')
+        uaKey.innerText = 'User Answer ';
+        userAnswer.prepend(uaKey)
         let answerAnswer = document.createElement('p')
+        const aKey = document.createElement('p')
+        aKey.classList.add('answerKey')
+        aKey.innerText = 'Correct Answer ';
+
         for (let a of choice.answers) {
             if (a[0] === choice.questions[i][0] && a[1] === choice.questions[i][1]) {
                 answerAnswer.innerText = a.slice(3).trim();
-                console.log(a[0])
             }
         }
         answerAnswer.classList.add('aSheetP')
+        answerAnswer.prepend(aKey)
         aContain.append(qRepeat)
         aContain.append(userAnswer)
         aContain.append(answerAnswer)

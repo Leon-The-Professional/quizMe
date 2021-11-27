@@ -1,6 +1,9 @@
 html {
-    font-family: Arial, Helvetica, sans-serif;
     background: var(--BG);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -23,14 +26,14 @@ p {
 
 h1 {
     padding: 1px;
-    margin: 5% auto 6%;
+    margin: 3% auto;
     font-size: 6rem;
     color: var(--windowIn);
 }
 
 h3 {
     font-size: 4rem;
-    margin: 2%;
+    margin: 3%;
 }
 
 button:hover {
@@ -44,7 +47,7 @@ button:hover {
     min-height: 100px;
     border: 3px solid var(--border);
     border-radius: 3px;
-    margin: 0 auto;
+    margin: 0 auto 5em;
     z-index: 2;
     background: var(--windowOut);
 }
@@ -69,12 +72,12 @@ button:hover {
     padding: 10px;
     z-index: 1;
     background: var(--backTabs);
-    transition: all .3s;
+    transition: all .2s;
     color: var(--windowIn);
 }
 
 .tabs:hover {
-    transition: all .3s;
+    transition: all .2s;
     background: var(--text);
     cursor:pointer;
     color: var(--textHover);
@@ -86,6 +89,7 @@ button:hover {
     background: var(--windowOut);
     z-index: 3;
     border-bottom: none;
+    border-bottom-color: var(--backTabs);
 }
 
 .activetab:hover {
@@ -96,7 +100,7 @@ button:hover {
     z-index: 2;
     color: var(--text);
     background: var(--windowIn);
-    border: 3px solid var(--border);
+    /* border: 3px solid var(--border); */
     border-radius: 3px;
     width: 90%;
     margin: 5% auto;
@@ -105,7 +109,7 @@ button:hover {
 }
 
 #quizContainer button {
-    margin: 2% 0;
+    margin: 2%;
     font: var(--windowIn);
     font-size: 1.2rem;
     min-width: 10rem;
@@ -127,7 +131,6 @@ button:hover {
 }
 
 .quizDiv{
-    width: 200px;
     margin: 0;
 }
 
@@ -142,6 +145,17 @@ button:hover {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+}
+
+#randomSect {
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#randomSect input[type='checkbox'] {
+margin: 3px 0 0 3px;
+align-self: center;
 }
 
 /* quiz sheet */
@@ -203,10 +217,26 @@ button:hover {
     display: none;
 }
 
+.answerKey {
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: .3em;
+}
+
 @media screen and (max-width: 1070px) {
 
 .tabs{
     width: 50px;
+}
+
+}
+
+@media screen and (max-width: 611px) {
+
+.selectionBox {
+    flex-direction: column;
 }
 
 }

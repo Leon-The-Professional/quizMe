@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>QuizMe</title>
 </head>
 
@@ -17,11 +20,11 @@
         <div class="tabs" id="jsTab" title="JavaScript">JS</div>
         <div class="tabs" id="gitTab" title="Git and GitHub">Git</div>
         <div class="tabs" id="backendTab" title="Backend">BE</div>
-        <div class="tabs" id="miscTab" title="Miscellaneous">Misc</div>
+        <!-- <div class="tabs" id="miscTab" title="Miscellaneous">Misc</div> -->
     </div>
     <section id="Quizzes">
         <div id="quizContainer">
-            <h3 class="text-center">Pick a Quiz Topic</h3>
+            <h3 class="text-center">Pick a Topic</h3>
             <div class="selectionBox">
                 <div id="htmlQ" class="quizDiv activeQuiz">
                     <select name="" class="quizSelect" id="htmlQzs">
@@ -75,12 +78,15 @@
                         <option value="mongoose">Mongoose</option>
                     </select>
                 </div>
-                <div id="miscQ" class="hidden quizDiv">
+                <!-- <div id="miscQ" class="hidden quizDiv">
                     <select name="" class="quizSelect" id="miscQzs">
                         <option value="">Abbreviations</option>
                     </select>
-                </div>
+                </div> -->
                 <button id="getQuiz">Get Quiz</button>
+                <div id="randomSect"><label for="randomize">Randomize?</label>
+                    <input type="checkbox" name="randomize" id="randomize" value="1">
+                </div>
             </div>
             <div id="quiz"></div>
             <div class="selectionBox">
