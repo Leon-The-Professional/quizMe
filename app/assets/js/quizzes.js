@@ -113,14 +113,41 @@ let tablesQuiz = {
 //CSS
 let flexboxQuiz = {
     questions: [
-        '1.	When display elements using a flexbox, which container should have display set to flex, the parent or the children?',
-        '2.	What property changes the direction in which a container stacks flex items? What are the 4 directions, and which one is the default?',
-        '3.	What property affects the wrapping quality of a flex box? What are the three values this property can use and which one is the default?',
-        '4.	What is the shorthand property for setting both the direction and wrap properties in one line?',
-        '5.	On what axis does the justify-content property run and in what direction does it flow by default? What are 7 possible values to use in the justify-content property and what do they do?',
-        '6.	On what axis does the align-items property run and in what direction does it flow? What is the default value of align-content? What are 7 other common values that align-content can contain?',
-        '7.	What is a flex-item property that can override the value of a parent’s align-content setting?',
-        '8.	What are the 4 other flex-item properties, and what do they do? What shorthand property can be used to set 3 of those 4 and in what order does the shorthand respond?'
+        '1.	What is <strong>flexbox</strong>?',
+        '2.	How do you create a flex container?',
+        '3.	What is the <strong>flex-direction</strong> property, what values can the property be set to, and what value is the default?',
+        '4.	What is the <strong>flex-wrap</strong> property, what values can the property be set to, and what value is the default?',
+        '5.	What is the <strong>flex-grow</strong> property, what values can the property be set to?',
+        '6.	What is the <strong>flex-shrink</strong> property, what values can the property be set to?',
+        '7.	What is the <strong>flex-basis</strong> property, what values can the property be set to?',
+        '8.	What is the <strong>justify-content</strong> property? What is the default value of justify-content? ',
+        '9.	What is the <strong>align-items</strong> property? What is the default value of align-items?',
+        '10. What is the <strong>align-content</strong> property? What is the default value of align-content?',
+        '11. What are the differences between align-items and align-content?',
+        '12. What values can be specified for justify-content?',
+        '13. What is <strong>align-self</strong>?',
+        '14. What is the <strong>flex-flow</strong> property?',
+        '15. What is the <strong>flex</strong> property? Describe the different shorthand options.',
+        '16. What does the <strong>order</strong> property do in flexbox?',
+    ],
+    answers: [
+        "1.	Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex (expand) to fill additional space or shrink to fit into smaller spaces. ",
+        "2.	Set display: flex on a parent container. Child elements within that container become flex items.",
+        "3.	The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed). Row is the default direction, and the other three directional options are row-reverse, column, column-reverse.",
+        "4.	The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked. nowrap is the default quality, the other two options are wrap or wrap-reverse.",
+        "5.	The flex-grow CSS property sets the flex grow factor of a flex item's main size. This property specifies how much of the remaining space in the flex container should be assigned to the item (the flex grow factor). Unitless values (numbers) are used.",
+        "6.	The flex-shrink CSS property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to flex-shrink. In use, flex-shrink is used alongside the other flex properties flex-grow and flex-basis. Unitless values (numbers) are used.",
+        "7.	The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing. Values with unit measurements to set width (or height if direction is set to column) or auto.",
+        "8.	The CSS justify-content property defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container. In a row the main axis runs horizontal, in a column the main axis vertical. The justify-content property applies along the main axis when used with flexbox, but since stretching in the main axis is controlled by flex, stretch behaves as flex-start.",
+        "9.	The CSS align-items property sets the align-self value on all direct children as a group. In Flexbox, it controls the alignment of items on the Cross Axis. In a row the cross axis runs vertical, in a column the cross axis runs horizontal. The default value of align-items is stretch.",
+        "10. The CSS align-content property sets the distribution of space between and around content items along a flexbox's cross-axis. In a row the cross axis runs vertical, in a column the cross axis runs horizontal. The default value of align-content is stretch.",
+        "11. align-content This property works only when the 'flex-wrap:' property is set to wrap and will have no effect when the number of flex-lines is 1, where align-items will work regardless of the 'flex-wrap:' property setting and does not depend on the number of flex-lines. align-content aligns flex-lines where align-items aligns flex-items. align-content can take 6 values (flex-start, flex-end, center, space-between, space-around, stretch) and align-items can take 5 (flex-start, flex-end, center, baseline, stretch. Answer credit: <a href:'https://www.geeksforgeeks.org/difference-between-align-content-and-align-items/'>https://www.geeksforgeeks.org/difference-between-align-content-and-align-items/.</a>",
+        "12. start, end, flex-start, center, left, right, normal, baseline (first baseline last baseline), space-between, space-around, space-evenly, stretch, safe, unsafe",
+        "13. The align-self CSS property overrides a flex item's (the child of a parent with display set to flex) align-items value. In Flexbox, it aligns the item on the cross axis.",
+        "14. A shorthand CSS property can be used to set both the flex - direction and flex - wrap(in that order).",
+        "15. The flex CSS shorthand property sets how a flex item(specified on the flex - item) will grow or shrink to fit the space available in its flex container.A single unitless value(number) will denote flex - grow and flex - basis is then equal to 0. A single value with specified width/ height will dente flex-basis.If there is ever a second unitless value, it will denote flex shrink.When writing shorthand for all three properties, it must go in the order of flex - grow, flex - shrink, flex - basis.",
+        "16. The order property can be set on flex - items to change the layout order without affecting the source material.",
+
     ]
 }
 
@@ -132,8 +159,11 @@ let mediaQueryQuiz = {
         '4. How do you call a media query to set a screen width that is 500px or less?',
         '5.How do you call a media query to set landscape or portrait orientation?',
         '6. How do you call a media query to set more than one sizes where the multiple sizes are not immediately related?',
-        '7. What does using not, only and ‘and’ in media query syntax do?',
+        '7. What do <em>not, only</em> and <em>and</em> in media query syntax do?',
         '8. What value would be used instead of screen to affect the css of a page that is being printed?'
+    ],
+    answers: [
+
     ]
 }
 // JAVASCRIPT

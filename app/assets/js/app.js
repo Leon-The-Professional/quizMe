@@ -7,7 +7,7 @@ let specificTabs = [
     jsTab = document.querySelector('#jsTab'),
     gitTab = document.querySelector('#gitTab'),
     backendTab = document.querySelector('#backendTab'),
-    miscTab = document.querySelector('#miscTab')
+    // miscTab = document.querySelector('#miscTab')
 ]
 
 let quizSections = [
@@ -16,7 +16,7 @@ let quizSections = [
     jsQ = document.querySelector('#jsQ'),
     gitQ = document.querySelector('#gitQ'),
     backendQ = document.querySelector('#backendQ'),
-    miscQ = document.querySelector('#miscQ')
+    // miscQ = document.querySelector('#miscQ')
 ]
 
 // Establishing Quiz Selected
@@ -218,7 +218,7 @@ const answerSheet = function () {
 
         for (let a of choice.answers) {
             if (a[0] === choice.questions[i][0] && a[1] === choice.questions[i][1]) {
-                answerAnswer.innerText = a.slice(3).trim();
+                answerAnswer.innerHTML = a.slice(3).trim();
             }
         }
         answerAnswer.classList.add('aSheetP')

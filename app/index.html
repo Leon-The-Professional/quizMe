@@ -20,7 +20,7 @@
         <div class="tabs" id="jsTab" title="JavaScript">JS</div>
         <div class="tabs" id="gitTab" title="Git and GitHub">Git</div>
         <div class="tabs" id="backendTab" title="Backend">BE</div>
-        <!-- <div class="tabs" id="miscTab" title="Miscellaneous">Misc</div> -->
+
     </div>
     <section id="Quizzes">
         <div id="quizContainer">
@@ -37,7 +37,6 @@
                 <div id="cssQ" class="quizDiv hidden">
                     <select name="" class="quizSelect" id="cssQzs">
                         <option value="flexbox">Flexbox</option>
-                        <!-- <option value="grid">Grid</option> -->
                         <option value="mediaQueries">Media Queries</option>
                         <!-- <option value="cssVariables">CSS Variables</option>
                     <option value="cssMethods">CSS Methods</option> -->
@@ -45,19 +44,10 @@
                 </div>
                 <div id="jsQ" class="hidden quizDiv">
                     <select name="" class="quizSelect" id="jsQzs">
-                        <!-- <option value="">General JavaScript Terminology</option> -->
                         <option value="strings">String Methods</option>
-                        <!-- <option value="">Math Object</option> -->
                         <option value="arrays">Arrays</option>
                         <option value="loops">Loops</option>
                         <option value="operators">Operators</option>
-                        <!-- <option value="">Higher Order Functions</option> -->
-                        <!-- <option value="">Try Catch</option> -->
-                        <!-- <option value="">Switch Case</option> -->
-                        <!-- <option value="">Manipulating Object Literals</option> -->
-                        <!-- <option value="">Events and Event Listeners</option> -->
-                        <!-- <option value="">Promises</option> -->
-                        <!-- <option value="">Async Functions</option> -->
                     </select>
                 </div>
                 <div id="gitQ" class="hidden quizDiv">
@@ -78,11 +68,7 @@
                         <option value="mongoose">Mongoose</option>
                     </select>
                 </div>
-                <!-- <div id="miscQ" class="hidden quizDiv">
-                    <select name="" class="quizSelect" id="miscQzs">
-                        <option value="">Abbreviations</option>
-                    </select>
-                </div> -->
+
                 <button id="getQuiz">Get Quiz</button>
                 <div id="randomSect"><label for="randomize">Randomize?</label>
                     <input type="checkbox" name="randomize" id="randomize" value="1">
@@ -94,14 +80,10 @@
             </div>
         </div>
         <div id="answerContainer" class="hidden">
+        </div>
+        <div id="answerCredit">Answers taken chiefly from <a href="https://developer.mozilla.org/en-US/">Mozilla
+                Developer Network</a></div>
     </section>
-
-
-
-
-
-
-
 
     <script src="assets/js/quizzes.js"></script>
     <script src="assets/js/app.js"></script>
