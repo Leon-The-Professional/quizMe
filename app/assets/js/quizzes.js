@@ -155,11 +155,11 @@ let flexboxQuiz = {
 let mediaQueryQuiz = {
     questions: [
         `1.	What is a Media Query?`,
-        `2.	What do the at-rules @media and @import do?`,
+        `2.	What do the at-rules <strong>@media</strong> and <strong>@import</strong> do?`,
         `3.	Describe the syntax used in an import query.`,
         `4.	Describe the syntax used in a media query.`,
-        `5.	What is a media type, and what are the four main media types used in media queries? How are media types specified?`,
-        `6.	What are media features? How are media features specified?`,
+        `5.	What is a <strong>media type</strong>, and what are the four main media types used in media queries? How are media types specified?`,
+        `6.	What are <strong>media features</strong>? How are media features specified?`,
         `7.	Many media features are <em>range</em> features, which means they can be prefixed with ‘min-‘ or ‘max-‘, what do min or max mean? Provide an example.`,
         `8.	How do you combine multiple types or features in a media query? Provide an example.`,
         `9.	How can you test for multiple queries to apply the same styles? Provide an example.`,
