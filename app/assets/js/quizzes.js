@@ -241,11 +241,11 @@ b.	if compareFunction (a, b) returns a value < or = to 0 leave a and b in the sa
 let LoopsQuiz = {
     key: '',
     questions: [
-        `1.	What is a for loop, and what syntax does it use?`,
-        `2.	What is a while loop, and what syntax does it use?`,
-        `3.	What is a labeled statement?`,
+        `1.	What is a <strong>for loop</strong>, and what syntax does it use?`,
+        `2.	What is a <strong>while loop</strong>, and what syntax does it use?`,
+        `3.	What is a <strong>labeled statement</strong>?`,
         `4.	What does the statement <strong>break;</strong> do?`,
-        `5.	What is a for of loop? What is the syntax?`,
+        `5.	What is a <strong>for of loop</strong>? What is the syntax?`,
         `6.	Are object literals considered iterable?`,
         `7.	What methods can be used to turn keys and values from object literals into new iterable arrays? What method gives you a nested array of key value pairs?`
     ],
