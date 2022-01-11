@@ -250,11 +250,11 @@ let LoopsQuiz = {
         `7.	What methods can be used to turn keys and values from object literals into new iterable arrays? What method gives you a nested array of key value pairs?`
     ],
     answers: [
-        `1.	A for loop repeats until a specified condition evaluates to false. for([initialExpression]; [conditionExpression]; [incrementExpressin]. example <p>for (let i = 0; i < 10; i++) The loop will repeat 9 times.</p>`,
-        `2.	A while loop executes its statements as long as a specified condition evaluates to true. <p>while (condition) {statement} example let i = 0 while(i < 100){console.log(i) The loop will print i in increments of 1 up to 99.</p>`,
-        `3.	A labeled statement is a label used to identify a loop. label: loopHere. example <p>myLoop: while(toddIsAnAss === true){doSomething()} </p>`,
-        `4.	The break statement terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.`,
-        `5.	A for of loop, loops over iterable objects(including array, map, set, arguments, and so on), invoking a custom interation hook with statements to be executed for the value of each distinct property. for(variable of objectToIterateOver) {statement} example with an array named animals, <p>for(let animal of animals){console.log(animal)}</p>`,
+        `1.	A for loop repeats until a specified condition evaluates to false. for([initialExpression]; [conditionExpression]; [incrementExpressin]. <p><em>example:</em> for (let i = 0; i < 10; i++) The loop will repeat 9 times.</p>`,
+        `2.	A while loop executes its statements as long as a specified condition evaluates to true. <p>while (condition) {statement} <p><em>example:</em> let i = 0 while(i < 100){console.log(i) The loop will print i in increments of 1 up to 99.</p>`,
+        `3.	A labeled statement is a label used to identify a loop. label: loopHere. <p><em>example:</em> myLoop: while(toddIsAnAss === true){doSomething()} </p>`,
+        `4.	The break statement terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement. To break a labeled loop, the label must be written after break. <p><em>example:</em> break label;</p>`,
+        `5.	A for of loop, loops over iterable objects(including array, map, set, arguments, and so on), invoking a custom interation hook with statements to be executed for the value of each distinct property. for(variable of objectToIterateOver) {statement} <p><em>example:</em> for(let animal of animals){console.log(animal)}</p>`,
         `6.	No`,
         `7.	Object.keys(object) Object.values(object) Object.entries(object)`
     ]
