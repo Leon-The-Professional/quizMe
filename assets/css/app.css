@@ -227,7 +227,7 @@ align-self: center;
 
 #answerCredit {
     color: var(--textHover);
-    width: 30%;
+    width: 30em;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 1em;
