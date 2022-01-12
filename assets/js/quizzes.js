@@ -86,7 +86,7 @@ let formsGenQz = {
         `10. What javascript function will prevent a form from submitting to a server?`,
     ],
     answers: [
-        `1.	The &lt;input@gt; HTML element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent.`,
+        `1.	The &lt;input@&gt; HTML element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent.`,
         "2.	The &lt;select&gt; HTML element represents a control that provides a menu of options. Each &lt;option&gt; element should have a value attribute containing the data value to submit to the server when that option is selected. If no value attribute is included, the value defaults to the text contained inside the element. ",
         "3.	The &lt;textarea&gt; HTML element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.",
         "4.	The URL that processes the form submission. This value can be overridden by a form action attribute on a &lt;button&gt;, &lt;input type=`submit`&gt;, or &lt;input type=`image`&gt; element. This attribute is ignored when method=`dialog` is set.",
