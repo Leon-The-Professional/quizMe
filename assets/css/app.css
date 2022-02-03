@@ -39,7 +39,8 @@ h2 {
 
 h3 {
     font-size: 3.5rem;
-    margin: 3%;
+    margin: 3% auto 2%;
+    color: var(--text);
 }
 
 button:hover {
@@ -195,6 +196,7 @@ align-self: center;
     margin: 5%;
     box-sizing: border-box;
     padding: 2% 0;
+    text-align: center;
 }
 
 .acontain{
