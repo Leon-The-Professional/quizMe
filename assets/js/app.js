@@ -129,6 +129,7 @@ const showQz = function (selector) {
     }
 }
 
+// Add Tab listeners
 for (let i = 0; i < specificTabs.length; i++) {
     specificTabs[i].addEventListener('click', function () {
         quizContainer.classList.remove('hidden')
@@ -148,7 +149,7 @@ const quizContainer = document.querySelector('#quizContainer')
 const quiz = document.querySelector('#quiz')
 const getQuiz = document.querySelector('#getQuiz')
 const randomize = document.querySelector('#randomize')
-// let randNum = function () { Math.random() * 10 }
+
 // Durstenfeld Shuffle 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -159,6 +160,7 @@ function shuffleArray(array) {
     }
 }
 
+// tempArray holds currently selected Quiz
 let tempArray = ''
 
 const populateQuiz = function (obj) {
@@ -210,10 +212,12 @@ const getAnswers = document.querySelector('#getAnswers')
 let answers = [];
 let answerValues = [];
 const answerContainer = document.querySelector('#answerContainer')
+const quizTitle = document.querySelector('#quiz-title')
 
 
 const answerSheet = function () {
     quizContainer.classList.add('hidden')
+    quizTitle.innerHTML = `${choice.title}`
     answers = Array.from(document.querySelectorAll('.answer'))
     answerValues = []
     for (let a of answers) {

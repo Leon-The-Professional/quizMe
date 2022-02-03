@@ -2,6 +2,7 @@
 
 // HTML
 let formsInpQz = {
+    title: `HTML Input Types`,
     key: `Describe what each of the following inputs does/is used for:`,
     questions: [
         `1.	text`,
@@ -34,6 +35,7 @@ let formsInpQz = {
     ]
 }
 let formsInpAttQz = {
+    title: `HTML Input Attributes`,
     key: `Describe what each attribute does`,
     questions: [
         `1. checked`,
@@ -72,6 +74,7 @@ let formsInpAttQz = {
     ]
 }
 let formsGenQz = {
+    title: `HTML Forms`,
     key: ``,
     questions: [
         `1.	What is the <strong>input</strong> element?`,
@@ -100,6 +103,7 @@ let formsGenQz = {
     ]
 }
 let tablesQuiz = {
+    title: `HTML Tables`,
     questions: [
         `1. What are the proper semantic element names used to organize the layout of a table?`,
         `2. What are colspan and rowspan?`,
@@ -113,6 +117,7 @@ let tablesQuiz = {
 }
 //CSS
 let flexboxQuiz = {
+    title: `CSS Flexbox`,
     questions: [
         `1.	What is <strong>flexbox</strong>?`,
         `2.	How do you create a flex container?`,
@@ -153,6 +158,7 @@ let flexboxQuiz = {
 }
 
 let mediaQueryQuiz = {
+    title: `CSS Media Queries`,
     questions: [
         `1.	What is a Media Query?`,
         `2.	What do the at-rules <strong>@media</strong> and <strong>@import</strong> do?`,
@@ -181,6 +187,7 @@ let mediaQueryQuiz = {
 }
 // JAVASCRIPT
 let ArraysQuiz = {
+    title: `JavaScript Arrays`,
     key: "APM = Array Prototype Method",
     questions: [
         `1.	What is an Array? What is the syntax used to define an array? Provide an example.`,
@@ -239,6 +246,7 @@ b.	if compareFunction (a, b) returns a value < or = to 0 leave a and b in the sa
 }
 
 let LoopsQuiz = {
+    title: `JavaScript Loops`,
     key: '',
     questions: [
         `1.	What is a <strong>for loop</strong>, and what syntax does it use?`,
@@ -261,6 +269,7 @@ let LoopsQuiz = {
 }
 
 let StringsQuiz = {
+    title: `JavaScript Strings`,
     key: 'let animal = tiger',
     questions: [
         `1.	What syntax is used to access a specific character in a string by its index?`,
@@ -295,7 +304,9 @@ let StringsQuiz = {
         '14. `${}` `My favorite animal is the ${animal}` = My favorite animal is the tiger.',
     ]
 }
+
 let OperatorsQuiz = {
+    title: `JavaScript Operators`,
     key: '(use x and y when writing out examples of operators) AO = Assignment Operator CO = Comparison Operator ArO = Arithmetic Operator LO = Logical Operator',
     questions: [
         `1.	What is an AO (<strong>Assignment Operator</strong>)?`,
@@ -358,6 +369,7 @@ let OperatorsQuiz = {
 }
 // GIT AND GITHUB
 let GitQuiz1 = {
+    title: `Git Quiz 1`,
     questions: [
         '1.	What is the command to initialize a repository?',
         '2.	What is the command for setting your username?',
@@ -413,6 +425,7 @@ let GitQuiz1 = {
 }
 
 let GitQuiz2 = {
+    title: `Git Quiz 2`,
     questions: [
         '1. What is the command for viewing all created branches?',
         '2. When merging branches, relative to the branch you are in, which branch is merged into which?',
@@ -479,6 +492,7 @@ let GitQuiz2 = {
 }
 
 let GitQuiz3 = {
+    title: `Git Quiz 3`,
     questions: [
         '1.	What is the command for configuring local username?',
         '2.	What git folder holds a heads directory that contains the hash commit for each branch tip?',
@@ -511,6 +525,7 @@ let GitQuiz3 = {
 }
 
 let GitHubQuiz1 = {
+    title: `GitHub Quiz 1`,
     questions: [
         '1. What is the command for copying a remote github repository to your local machine?',
         '2. What is the command to view any existing remotes? What additional flag can be added for more information about the remotes?',
@@ -563,6 +578,7 @@ let GitHubQuiz1 = {
 }
 
 let GitHubQuiz2 = {
+    title: `GitHub Quiz 2`,
     questions: [
         'What are the strengths and weaknesses of a Centralized Workflow?',
         'What are the strengths and weaknesses of a Feature Branch Workflow?',
@@ -592,6 +608,7 @@ let GitHubQuiz2 = {
 // Backend
 
 let nodeQz = {
+    title: `Node`,
     key: '',
     questions: [
         '1. What is Node?',
@@ -643,6 +660,7 @@ let nodeQz = {
 }
 
 let expressQz = {
+    title: `Express`,
     questions: [
         '1.	What is express?',
         '2.	What is common practice for setting up and requiring express?',
@@ -690,6 +708,7 @@ let expressQz = {
 }
 
 let expressRestQz = {
+    title: `Express RESTful`,
     questions: [
         '1.	What are four defining features of a GET request?',
         '2.	What are four defining features of a POST request?',
@@ -717,6 +736,7 @@ let expressRestQz = {
 }
 
 let mongoQz = {
+    title: `MongoDB`,
     questions: [
         '1.	What is a database?',
         '2.	What is a SQL database?',
@@ -762,6 +782,7 @@ let mongoQz = {
 }
 
 let mongooseQz = {
+    title: `Mongoose`,
     key: 'Amadeus, 1986, 9.2, R. Amelie, 2001, 8.3, R. Moonrise Kingdom, 2012, 7.3, pg- 13.',
     questions: [
         '1.	What does ODM stand for, what does it do?',

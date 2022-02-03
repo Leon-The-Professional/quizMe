@@ -32,8 +32,13 @@ h1 {
     color: var(--windowIn);
 }
 
-h3 {
+h2 {
     font-size: 4rem;
+    margin: 3%;
+}
+
+h3 {
+    font-size: 3.5rem;
     margin: 3%;
 }
 
