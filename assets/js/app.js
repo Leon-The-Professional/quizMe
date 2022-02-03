@@ -158,10 +158,13 @@ function shuffleArray(array) {
         array[j] = temp;
     }
 }
+
+let tempArray = ''
+
 const populateQuiz = function (obj) {
     quiz.innerHTML = '';
     i = 1;
-    let tempArray = [...obj.questions]
+    tempArray = [...obj.questions]
     if (randomize.checked) {
         shuffleArray(tempArray);
     } else {
@@ -196,6 +199,13 @@ getQuiz.addEventListener('click', function () {
     populateQuiz(choice)
 })
 
+// Generate Answer Sheet
+
+
+const scrollTop = function () {
+    window.scrollTo(0, 0);
+};
+
 const getAnswers = document.querySelector('#getAnswers')
 let answers = [];
 let answerValues = [];
@@ -210,35 +220,46 @@ const answerSheet = function () {
         answerValues.push(a.value)
     }
     for (let i = 0; i < choice.questions.length; i++) {
+        // create answer container
         let aContain = document.createElement('div')
         aContain.classList.add('acontain')
+
+        // Add initial question
         let qRepeat = document.createElement('p')
         qRepeat.classList.add('aSheetP')
+        qRepeat.innerHTML = tempArray[i].slice(3).trim();
+        // Add Question key
         const qKey = document.createElement('p')
         qKey.classList.add('answerKey')
         qKey.innerText = 'Question ';
-        qRepeat.innerHTML = choice.questions[i].slice(3).trim();
         qRepeat.prepend(qKey)
+
+        // Add user answer
         let userAnswer = document.createElement('p')
         userAnswer.classList.add('answerP')
         userAnswer.classList.add('aSheetP')
         userAnswer.innerText = answerValues[i]
+        // Add Answer key
         const uaKey = document.createElement('p')
         uaKey.classList.add('answerKey')
         uaKey.innerText = 'User Answer ';
         userAnswer.prepend(uaKey)
-        let answerAnswer = document.createElement('p')
-        const aKey = document.createElement('p')
-        aKey.classList.add('answerKey')
-        aKey.innerText = 'Correct Answer ';
 
+        // Add correct answer
+        let answerAnswer = document.createElement('p');
         for (let a of choice.answers) {
-            if (a[0] === choice.questions[i][0] && a[1] === choice.questions[i][1]) {
+            if (a[0] === tempArray[i][0] && a[1] === tempArray[i][1]) {
                 answerAnswer.innerHTML = a.slice(3).trim();
             }
         }
         answerAnswer.classList.add('aSheetP')
+        // Add Correct Answer key
+        const aKey = document.createElement('p')
+        aKey.classList.add('answerKey')
+        aKey.innerText = 'Correct Answer ';
         answerAnswer.prepend(aKey)
+
+        // Finalize answer sheet
         aContain.append(qRepeat)
         aContain.append(userAnswer)
         aContain.append(answerAnswer)
@@ -246,7 +267,9 @@ const answerSheet = function () {
     }
     getAnswers.classList.add('hidden')
     answerContainer.classList.remove('hidden')
+    scrollTop();
 }
+
 
 getAnswers.addEventListener('click', answerSheet)
 
