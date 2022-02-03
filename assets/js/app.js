@@ -76,6 +76,22 @@ function changeChoice() {
         case 'mongoose':
             choice = mongooseQz;
             break;
+        // Git and GitHub quizzes
+        case 'git1':
+            choice = GitQuiz1;
+            break;
+        case 'git2':
+            choice = GitQuiz2;
+            break;
+        case 'git3':
+            choice = GitQuiz3;
+            break;
+        case 'github1':
+            choice = GitHubQuiz1;
+            break;
+        case 'github2':
+            choice = GitHubQuiz2;
+            break;
         default:
     }
 }
