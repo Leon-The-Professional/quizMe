@@ -252,7 +252,7 @@ let LoopsQuiz = {
         `1.	What is a <strong>for loop</strong>, and what syntax does it use?`,
         `2.	What is a <strong>while loop</strong>, and what syntax does it use?`,
         `3.	What is a <strong>labeled statement</strong>?`,
-        `4.	What does the statement <strong>break;</strong> do?`,
+        `4.	What does the statement <strong>break;</strong> do? How does it work with labeled statemnts?`,
         `5.	What is a <strong>for of loop</strong>? What is the syntax?`,
         `6.	Are object literals considered iterable?`,
         `7.	What methods can be used to turn keys and values from object literals into new iterable arrays? What method gives you a nested array of key value pairs?`
